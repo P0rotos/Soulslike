@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 lastMoveDirection = Vector2.right;
     public static PlayerController instance;
     private bool isAction = false;
+    public Image healthBarFill;
 
     [Header("Stats")]
     [SerializeField] private float mov;
@@ -30,10 +32,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float rollDuration = 0.3f;
 
     private float speed;
+    public float health;
     public Joystick joystick;
     
     void OnValidate(){
         speed = mov / 4f; // Or whatever logic you want
+        health = vit;
     }
 
     void Awake(){
@@ -47,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     void Start(){
         SetMov(8.0f);
-        vit = 10.0f; // Or whatever logic you want
+        SetHealth(10.0f);
         dashspeed = 15.0f;
         rollspeed = 8.0f;
         str = 1f;
@@ -56,11 +60,12 @@ public class PlayerController : MonoBehaviour
             Debug.Log("PlayerController: Error, no se ha encontrado el objeto Attack_Spawn");
         }
         joystick = GameObject.Find("Floating Joystick").GetComponent<Joystick>();
+        UpdateHealthUI();
     }
 
     void Update(){   
         if (isAction) return;
-        if (vit <= 0){
+        if (health <= 0){
             Destroy(gameObject);
         }
         float h = Input.GetAxis("Horizontal"); //maybe max input joytick to deide movement
@@ -74,8 +79,9 @@ public class PlayerController : MonoBehaviour
         Dash();
         Roll();
         Attack(h, v);
+        UpdateHealthUI();
 
-        if (vit <= 0){            
+        if (health <= 0){            
             Transform mainCamera = transform.Find("Main Camera");
             if (mainCamera != null){
                 mainCamera.parent = null;
@@ -98,8 +104,8 @@ public class PlayerController : MonoBehaviour
             if (attack != null)
                 dmg = attack.dmg;
 
-            vit -= dmg;
-            Debug.Log($"{gameObject.name} took {dmg} damage! Remaining HP: {vit}");
+            health -= dmg;
+            Debug.Log($"{gameObject.name} took {dmg} damage! Remaining HP: {health}");
 
             // Calculate pushback direction (from enemy to player)    
             Vector2 pushDirection = (transform.position - other.transform.position).normalized;
@@ -226,4 +232,15 @@ public class PlayerController : MonoBehaviour
         speed = mov / 4f;
     }
 
+    public void SetHealth(float h){
+        vit = h;
+        health = vit;
+    }
+
+    void UpdateHealthUI(){
+        // Update the fill amount of the health bar
+        if (healthBarFill != null){
+            healthBarFill.fillAmount = health / vit;
+        }
+    }
 }
