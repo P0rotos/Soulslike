@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         if (attackSpawn == null){
             Debug.Log("PlayerController: Error, no se ha encontrado el objeto Attack_Spawn");
         }
-        joystick = GameObject.Find("Floating Joystick").GetComponent<Joystick>();
+        joystick = GameObject.Find("Fixed Joystick").GetComponent<Joystick>();
         UpdateHealthUI();
     }
 
@@ -84,9 +84,12 @@ public class PlayerController : MonoBehaviour
         }
 
         rb.linearVelocity = moveInput * speed;
-        Dash();
-        Roll();
-        Attack(h, v);
+        if (Input.GetKeyDown(KeyCode.LeftShift)){
+            Dash();
+        }
+        if (Input.GetKeyDown(KeyCode.Space)){
+            Roll();
+        }
         UpdateHealthUI();
 
         if (health <= 0){            
@@ -131,39 +134,33 @@ public class PlayerController : MonoBehaviour
         // Debug.Log(gameObject.name + " is staying in trigger with " + other.gameObject.name);
     }
 
-    void Dash(){
-        if (Input.GetKeyDown(KeyCode.LeftShift)){
-            StartCoroutine(DashCoroutine());
-        }
+    public void Dash(){
+        StartCoroutine(DashCoroutine());
     }
 
-    void Roll(){
-        if (Input.GetKeyDown(KeyCode.Space)){
-            StartCoroutine(RollCoroutine());
-        }
+    public void Roll(){
+        StartCoroutine(RollCoroutine());
     }
 
-    void Attack(float h, float v){
-        if (Input.GetMouseButtonDown(0)){
-            anim.SetBool("Attack", true);
-            Debug.Log("PlayerController: Attack");
-            Transform spawnTransform = attackSpawn.transform;
-            
-            Vector3 offset = (Vector3)lastMoveDirection * attackOffset;
-            Vector3 spawnPosition = spawnTransform.position + offset;
+    public void Attack(){
+        anim.SetBool("Attack", true);
+        Debug.Log("PlayerController: Attack");
+        Transform spawnTransform = attackSpawn.transform;
+        
+        Vector3 offset = (Vector3)lastMoveDirection * attackOffset;
+        Vector3 spawnPosition = spawnTransform.position + offset;
 
-            float angle = Mathf.Atan2(lastMoveDirection.y, lastMoveDirection.x) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.Euler(0, 0, angle);
+        float angle = Mathf.Atan2(lastMoveDirection.y, lastMoveDirection.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.Euler(0, 0, angle);
 
-            GameObject attack = Instantiate<GameObject>(prefabAttack, spawnPosition, rotation);
+        GameObject attack = Instantiate<GameObject>(prefabAttack, spawnPosition, rotation);
 
-            var follow = attack.GetComponent<SwordAttackController>();
-            if (follow != null){
-                follow.player = this;
-                follow.offset = offset;
-                follow.dmg = str;
-                Destroy(attack, time);
-            }
+        var follow = attack.GetComponent<SwordAttackController>();
+        if (follow != null){
+            follow.player = this;
+            follow.offset = offset;
+            follow.dmg = str;
+            Destroy(attack, time);
         }
     }
 
