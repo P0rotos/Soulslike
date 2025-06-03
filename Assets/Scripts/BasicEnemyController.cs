@@ -12,6 +12,7 @@ public class BasicEnemyController : MonoBehaviour
     [SerializeField] private float mov;
 
     private Rigidbody2D rb;
+    private Animator anim;
     public float speed;
     public float detectionRadius = 5f; // Only chase if player is within this distance
     private Transform player;
@@ -27,6 +28,7 @@ public class BasicEnemyController : MonoBehaviour
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -43,13 +45,17 @@ public class BasicEnemyController : MonoBehaviour
     void Update(){
         if (player != null){
             float distance = Vector2.Distance(transform.position, player.position);
-                if (distance < detectionRadius){
+            if (distance < detectionRadius){
                 // Move towards the player
+                Vector2 lastMoveDirection = (player.position - transform.position).normalized;
                 transform.position = Vector2.MoveTowards(
                     transform.position,
                     player.position,
                     speed * Time.deltaTime
                 );
+                anim.SetInteger("Run", animDirection(lastMoveDirection));
+            }else{
+                anim.SetInteger("Run", 0);
             }
         }
         if (vit <= 0){
@@ -77,6 +83,12 @@ public class BasicEnemyController : MonoBehaviour
             float pushForce = 2.0f; // Adjust this value as needed
             StartCoroutine(PushbackCoroutine(pushDirection, pushForce, 0.1f));
         }
+        if (other.CompareTag("Enemy")){
+            // Calculate pushback direction (from enemy to player)    
+            Vector2 pushDirection = (transform.position - other.transform.position).normalized;
+            float pushForce = 0.1f; // Adjust this value as needed
+            StartCoroutine(PushbackCoroutine(pushDirection, pushForce, 0.1f));
+        }
     }
 
     void OnTriggerExit2D(Collider2D other){
@@ -98,5 +110,13 @@ public class BasicEnemyController : MonoBehaviour
             yield return null;
         }
         transform.position = end;
+    }
+
+    int animDirection(Vector2 dir){
+        // Example: 0 = right, 1 = up, 2 = left, 3 = down    
+        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+            return dir.x > 0 ? 2 : 1; // 1: 2
+        else
+            return dir.y > 0 ? 3 : 4; // 3 : 4
     }
 }

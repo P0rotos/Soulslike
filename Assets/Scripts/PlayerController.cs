@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Animator anim;
     private Vector2 lastMoveDirection = Vector2.right;
     public static PlayerController instance;
     private bool isAction = false;
@@ -25,7 +26,8 @@ public class PlayerController : MonoBehaviour
     public GameObject attackSpawn;
 
     [Header("Others")]
-    [SerializeField] private float attackOffset = 1.0f;
+    [SerializeField] private float time = 0.5f;
+    [SerializeField] private float attackOffset = 0.5f;
     [SerializeField] private float dashspeed;
     [SerializeField] private float rollspeed;
     [SerializeField] private float dashDuration = 0.3f; // Duration in seconds
@@ -46,6 +48,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         instance = this;
     }
 
@@ -72,8 +75,13 @@ public class PlayerController : MonoBehaviour
         float v = Input.GetAxis("Vertical");
         Vector2 moveInput = new Vector2(h + joystick.Direction.x, v + joystick.Direction.y);
         
-        if (moveInput.sqrMagnitude > 0.01f)
+        
+        if (moveInput.sqrMagnitude > 0.01f){
             lastMoveDirection = moveInput.normalized;
+            anim.SetInteger("Run", animDirection(moveInput.normalized));
+        }else{
+            anim.SetInteger("Run", 0);
+        }
 
         rb.linearVelocity = moveInput * speed;
         Dash();
@@ -137,6 +145,7 @@ public class PlayerController : MonoBehaviour
 
     void Attack(float h, float v){
         if (Input.GetMouseButtonDown(0)){
+            anim.SetBool("Attack", true);
             Debug.Log("PlayerController: Attack");
             Transform spawnTransform = attackSpawn.transform;
             
@@ -150,9 +159,10 @@ public class PlayerController : MonoBehaviour
 
             var follow = attack.GetComponent<SwordAttackController>();
             if (follow != null){
-                follow.player = this.transform;
+                follow.player = this;
                 follow.offset = offset;
                 follow.dmg = str;
+                Destroy(attack, time);
             }
         }
     }
@@ -242,5 +252,16 @@ public class PlayerController : MonoBehaviour
         if (healthBarFill != null){
             healthBarFill.fillAmount = health / vit;
         }
+    }
+
+    int animDirection(Vector2 dir){
+        // Example: 0 = right, 1 = up, 2 = left, 3 = down    
+        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+            return dir.x > 0 ? 1 : 2; // 1: 2
+        else
+            return dir.y > 0 ? 3 : 4; // 3 : 4
+    }
+    public void OnAttackEnded() {
+        anim.SetBool("Attack", false);
     }
 }
