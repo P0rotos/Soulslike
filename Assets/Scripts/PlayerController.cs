@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
     private float speed;
     public float health;
     public Joystick joystick;
+    GameObject attack;
     
     void OnValidate(){
         speed = mov / 4f; // Or whatever logic you want
@@ -75,13 +77,7 @@ public class PlayerController : MonoBehaviour
         float v = Input.GetAxis("Vertical");
         Vector2 moveInput = new Vector2(h + joystick.Direction.x, v + joystick.Direction.y);
         
-        
-        if (moveInput.sqrMagnitude > 0.01f){
-            lastMoveDirection = moveInput.normalized;
-            anim.SetInteger("Run", animDirection(moveInput.normalized));
-        }else{
-            anim.SetInteger("Run", 0);
-        }
+        Animate(moveInput, h + joystick.Direction.x, v + joystick.Direction.y);
 
         rb.linearVelocity = moveInput * speed;
         if (Input.GetKeyDown(KeyCode.LeftShift)){
@@ -110,13 +106,10 @@ public class PlayerController : MonoBehaviour
         // You can add your game logic here, e.g., collect item, activate switch
         if (other.CompareTag("Enemy")){            
             // Get the damage from the attack object
-            float dmg = 1f;
-            var attack = other.GetComponent<SwordAttackController>();
+            var attack = other.GetComponent<IDamage>();
             if (attack != null)
-                dmg = attack.dmg;
-
-            health -= dmg;
-            Debug.Log($"{gameObject.name} took {dmg} damage! Remaining HP: {health}");
+                health -= attack.str;
+            Debug.Log($"{gameObject.name} took {attack.str} damage! Remaining HP: {health}");
 
             // Calculate pushback direction (from enemy to player)    
             Vector2 pushDirection = (transform.position - other.transform.position).normalized;
@@ -153,15 +146,20 @@ public class PlayerController : MonoBehaviour
         float angle = Mathf.Atan2(lastMoveDirection.y, lastMoveDirection.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(0, 0, angle);
 
-        GameObject attack = Instantiate<GameObject>(prefabAttack, spawnPosition, rotation);
+        attack = Instantiate<GameObject>(prefabAttack, spawnPosition, rotation);
 
         var follow = attack.GetComponent<SwordAttackController>();
         if (follow != null){
             follow.player = this;
             follow.offset = offset;
             follow.dmg = str;
-            Destroy(attack, time);
+            //Destroy(attack, time);
         }
+    }
+
+    public void endAttack(){
+        anim.SetBool("Attack", false);
+        Destroy(attack);
     }
 
     IEnumerator DashCoroutine(){
@@ -251,14 +249,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    int animDirection(Vector2 dir){
-        // Example: 0 = right, 1 = up, 2 = left, 3 = down    
-        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
-            return dir.x > 0 ? 1 : 2; // 1: 2
-        else
-            return dir.y > 0 ? 3 : 4; // 3 : 4
+    public void Animate(Vector2 moveInput, float h, float v){        
+        if (moveInput.sqrMagnitude > 0.01f){
+            lastMoveDirection = moveInput.normalized;
+            anim.SetBool("Run", true);//anim.SetInteger("Run", animDirection(moveInput.normalized));
+            anim.SetFloat("X", h);
+            anim.SetFloat("Y", v);
+        }else{
+            anim.SetBool("Run", false);//anim.SetInteger("Run", 0);
+        }
+
     }
+
     public void OnAttackEnded() {
         anim.SetBool("Attack", false);
+    }
+    void OnDestroy() {
+        SceneManager.LoadSceneAsync(0);
     }
 }

@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour{
     void Start(){
         positionRef = GameObject.Find("PositionRef");
         Vector3 spawnPosition = new Vector3(6f, 0f, 0f);
-        GameObject enemy = Instantiate<GameObject>(prefabEnemy, spawnPosition, Quaternion.identity);
+        //GameObject enemy = Instantiate<GameObject>(prefabEnemy, spawnPosition, Quaternion.identity);
     }
 
     // Update is called once per frame

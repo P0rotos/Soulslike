@@ -1,0 +1,1730 @@
+fileFormatVersion: 2
+guid: f3fa18875f9f5204e86412ccc35573bb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2388426224238041612
+    second: RA_Crypt_Animations_002_0
+  - first:
+      213: -1045790796713873999
+    second: RA_Crypt_Animations_002_1
+  - first:
+      213: 385833042823590497
+    second: RA_Crypt_Animations_002_2
+  - first:
+      213: -9198090503964712448
+    second: RA_Crypt_Animations_002_3
+  - first:
+      213: -1021820951675830603
+    second: RA_Crypt_Animations_002_4
+  - first:
+      213: -6583845617859136188
+    second: RA_Crypt_Animations_002_5
+  - first:
+      213: -4584215824374472628
+    second: RA_Crypt_Animations_002_6
+  - first:
+      213: -3253683539031441186
+    second: RA_Crypt_Animations_002_7
+  - first:
+      213: 4230472022381523457
+    second: RA_Crypt_Animations_002_8
+  - first:
+      213: -6230704723732171705
+    second: RA_Crypt_Animations_002_9
+  - first:
+      213: -3393561709351389301
+    second: RA_Crypt_Animations_002_10
+  - first:
+      213: -7740653469599694477
+    second: RA_Crypt_Animations_002_11
+  - first:
+      213: -427156440429060808
+    second: RA_Crypt_Animations_002_12
+  - first:
+      213: 5328735628467298124
+    second: RA_Crypt_Animations_002_13
+  - first:
+      213: -7755790342954250323
+    second: RA_Crypt_Animations_002_14
+  - first:
+      213: 5724520828552808563
+    second: RA_Crypt_Animations_002_15
+  - first:
+      213: 5209121784955383801
+    second: RA_Crypt_Animations_002_16
+  - first:
+      213: -2028940488348251927
+    second: RA_Crypt_Animations_002_17
+  - first:
+      213: 3463258591099349489
+    second: RA_Crypt_Animations_002_18
+  - first:
+      213: -3165406936956784485
+    second: RA_Crypt_Animations_002_19
+  - first:
+      213: -4908092857503208339
+    second: RA_Crypt_Animations_002_20
+  - first:
+      213: 3082199137169523897
+    second: RA_Crypt_Animations_002_21
+  - first:
+      213: -1086912214344199215
+    second: RA_Crypt_Animations_002_22
+  - first:
+      213: 8325588602866238183
+    second: RA_Crypt_Animations_002_23
+  - first:
+      213: 295836799019675688
+    second: RA_Crypt_Animations_002_24
+  - first:
+      213: 5795768463157854962
+    second: RA_Crypt_Animations_002_25
+  - first:
+      213: 7320981247771563433
+    second: RA_Crypt_Animations_002_26
+  - first:
+      213: -3596010086691848319
+    second: RA_Crypt_Animations_002_27
+  - first:
+      213: -3993033749252954797
+    second: RA_Crypt_Animations_002_28
+  - first:
+      213: -2077029068781664730
+    second: RA_Crypt_Animations_002_29
+  - first:
+      213: 8020945972930536921
+    second: RA_Crypt_Animations_002_30
+  - first:
+      213: -2285606153215465693
+    second: RA_Crypt_Animations_002_31
+  - first:
+      213: -2117749731092782656
+    second: RA_Crypt_Animations_002_32
+  - first:
+      213: 1398498696731202810
+    second: RA_Crypt_Animations_002_33
+  - first:
+      213: -7795529241611278119
+    second: RA_Crypt_Animations_002_34
+  - first:
+      213: -4375470521237945340
+    second: RA_Crypt_Animations_002_35
+  - first:
+      213: -222357288292179573
+    second: RA_Crypt_Animations_002_36
+  - first:
+      213: -7815854305661965088
+    second: RA_Crypt_Animations_002_37
+  - first:
+      213: -5711731341892494654
+    second: RA_Crypt_Animations_002_38
+  - first:
+      213: -2373439773836944045
+    second: RA_Crypt_Animations_002_39
+  - first:
+      213: -867024236651220816
+    second: RA_Crypt_Animations_002_40
+  - first:
+      213: -5751541724077372895
+    second: RA_Crypt_Animations_002_41
+  - first:
+      213: -2431514698525699757
+    second: RA_Crypt_Animations_002_42
+  - first:
+      213: -7888302403934334857
+    second: RA_Crypt_Animations_002_43
+  - first:
+      213: 3301709477535066765
+    second: RA_Crypt_Animations_002_44
+  - first:
+      213: 3955376832994425546
+    second: RA_Crypt_Animations_002_45
+  - first:
+      213: -2332121131446665536
+    second: RA_Crypt_Animations_002_46
+  - first:
+      213: -9039763669689767110
+    second: RA_Crypt_Animations_002_47
+  - first:
+      213: 4983636422639436065
+    second: RA_Crypt_Animations_002_48
+  - first:
+      213: -6086824303668093575
+    second: RA_Crypt_Animations_002_49
+  - first:
+      213: 8787110064845244789
+    second: RA_Crypt_Animations_002_50
+  - first:
+      213: -8201651324505806422
+    second: RA_Crypt_Animations_002_51
+  - first:
+      213: -3863128654152438799
+    second: RA_Crypt_Animations_002_52
+  - first:
+      213: -4024395166110304473
+    second: RA_Crypt_Animations_002_53
+  - first:
+      213: 3016581893720730820
+    second: RA_Crypt_Animations_002_54
+  - first:
+      213: -3098787151756330138
+    second: RA_Crypt_Animations_002_55
+  - first:
+      213: 9168814984553923800
+    second: RA_Crypt_Animations_002_56
+  - first:
+      213: -4108731629171690153
+    second: RA_Crypt_Animations_002_57
+  - first:
+      213: 841234550885533845
+    second: RA_Crypt_Animations_002_58
+  - first:
+      213: 6199625666213734700
+    second: RA_Crypt_Animations_002_59
+  - first:
+      213: -6158061750720223228
+    second: RA_Crypt_Animations_002_60
+  - first:
+      213: -8121909477443114060
+    second: RA_Crypt_Animations_002_61
+  - first:
+      213: -8204828026020975110
+    second: RA_Crypt_Animations_002_62
+  - first:
+      213: -8735303407187600134
+    second: RA_Crypt_Animations_002_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 347
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f56014e00b9aded0800000000000000
+      internalID: -2388426224238041612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 347
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bd2f7cafca9c71f0800000000000000
+      internalID: -1045790796713873999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 347
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162bb14bb11ca5500800000000000000
+      internalID: 385833042823590497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_3
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 347
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0022a439b61d95080800000000000000
+      internalID: -9198090503964712448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_4
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 347
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5be7f4f1243c1d1f0800000000000000
+      internalID: -1021820951675830603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_5
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 347
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4457e731b4b71a4a0800000000000000
+      internalID: -6583845617859136188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_6
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 347
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c406f66fef79160c0800000000000000
+      internalID: -4584215824374472628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_7
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 347
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0ce7c5f0898d2d0800000000000000
+      internalID: -3253683539031441186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_8
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 341
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102774ee3e7a5ba30800000000000000
+      internalID: 4230472022381523457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_9
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 341
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7447891c0171889a0800000000000000
+      internalID: -6230704723732171705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 299
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b873ebeea95a7e0d0800000000000000
+      internalID: -3393561709351389301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_11
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 299
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3718d1f5eaca39490800000000000000
+      internalID: -7740653469599694477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_12
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 299
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d94b80b7f621af0800000000000000
+      internalID: -427156440429060808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_13
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 299
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4fd2cc32d873f940800000000000000
+      internalID: 5328735628467298124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_14
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 299
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf8ec766c5ed5490800000000000000
+      internalID: -7755790342954250323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_15
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 299
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 378073f1d55917f40800000000000000
+      internalID: 5724520828552808563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_16
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 299
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ffa3001aa48a4840800000000000000
+      internalID: 5209121784955383801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_17
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 299
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e848992061c7d3e0800000000000000
+      internalID: -2028940488348251927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_18
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 293
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9ebc7e657ff0030800000000000000
+      internalID: 3463258591099349489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_19
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 293
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b90322179273214d0800000000000000
+      internalID: -3165406936956784485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_20
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 251
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ca3efdc83f2ebb0800000000000000
+      internalID: -4908092857503208339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_21
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 251
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b4410af8cb26ca20800000000000000
+      internalID: 3082199137169523897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_22
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 251
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d31bf989138ae0f0800000000000000
+      internalID: -1086912214344199215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_23
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 251
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e202e339be6a8370800000000000000
+      internalID: 8325588602866238183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_24
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 251
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8207e0550060b1400800000000000000
+      internalID: 295836799019675688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_25
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 251
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f28feeb5b4be6050800000000000000
+      internalID: 5795768463157854962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_26
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 251
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a558b818a9599560800000000000000
+      internalID: 7320981247771563433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_27
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 251
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18fb20ee0e7681ec0800000000000000
+      internalID: -3596010086691848319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_28
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 245
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 355a1a706f4e598c0800000000000000
+      internalID: -3993033749252954797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_29
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 245
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 626cb170119ec23e0800000000000000
+      internalID: -2077029068781664730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_30
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 203
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5ef179ddf105f60800000000000000
+      internalID: 8020945972930536921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_31
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 203
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32725253055e740e0800000000000000
+      internalID: -2285606153215465693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_32
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 203
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c1290307dd3c92e0800000000000000
+      internalID: -2117749731092782656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_33
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 203
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af49285b727786310800000000000000
+      internalID: 1398498696731202810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_34
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 203
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d8e69d0577b0d390800000000000000
+      internalID: -7795529241611278119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_35
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 203
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4044b604eb43743c0800000000000000
+      internalID: -4375470521237945340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_36
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 203
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b81202279370aecf0800000000000000
+      internalID: -222357288292179573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_37
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 203
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ecafce4be1888390800000000000000
+      internalID: -7815854305661965088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_38
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 197
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca580a4b9adbb0b0800000000000000
+      internalID: -5711731341892494654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_39
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 197
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d5aa8c919df0fd0800000000000000
+      internalID: -2373439773836944045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_40
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 155
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0ffbaec06b7f3f0800000000000000
+      internalID: -867024236651220816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_41
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 155
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ac781664b6e20b0800000000000000
+      internalID: -5751541724077372895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_42
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 155
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3511c30b346814ed0800000000000000
+      internalID: -2431514698525699757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_43
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 155
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77052a4f1ce178290800000000000000
+      internalID: -7888302403934334857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_44
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 149
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8aa400d64702dd20800000000000000
+      internalID: 3301709477535066765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_45
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 149
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca317be54254e630800000000000000
+      internalID: 3955376832994425546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_46
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 107
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce70f2ef24a2afd0800000000000000
+      internalID: -2332121131446665536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_47
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 107
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3be8ae46de4c8280800000000000000
+      internalID: -9039763669689767110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_48
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 107
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1214f150cee692540800000000000000
+      internalID: 4983636422639436065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_49
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 107
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d16a19b81478ba0800000000000000
+      internalID: -6086824303668093575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_50
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 101
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5794c514c0612f970800000000000000
+      internalID: 8787110064845244789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_51
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 101
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa928371391ed2e80800000000000000
+      internalID: -8201651324505806422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_52
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 59
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fb6c9fe4f8636ac0800000000000000
+      internalID: -3863128654152438799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_53
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 59
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72732382be97628c0800000000000000
+      internalID: -4024395166110304473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_54
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 59
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cc6913ff3d0dd920800000000000000
+      internalID: 3016581893720730820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_55
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 59
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bf409e085eef4d0800000000000000
+      internalID: -3098787151756330138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_56
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 53
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d48d9566ac2e3f70800000000000000
+      internalID: 9168814984553923800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_57
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 53
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7553fcd2a5adaf6c0800000000000000
+      internalID: -4108731629171690153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_58
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 11
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5984152fd5aacab00800000000000000
+      internalID: 841234550885533845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_59
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 11
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29601742be790650800000000000000
+      internalID: 6199625666213734700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_60
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 11
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 408a66be67b2a8aa0800000000000000
+      internalID: -6158061750720223228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_61
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 11
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bbef1bac5e294f80800000000000000
+      internalID: -8121909477443114060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_62
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 5
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afda9d1a168922e80800000000000000
+      internalID: -8204828026020975110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Crypt_Animations_002_63
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 5
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afcd25135d7f5c680800000000000000
+      internalID: -8735303407187600134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,15 +1,16 @@
 using UnityEngine;
 using System.Collections;
 
-public class BasicEnemyController : MonoBehaviour
+public class BasicEnemyController : MonoBehaviour, IDamage
 {
     [Header("Stats")]
     [SerializeField] private float vit;
-    [SerializeField] private float str;
+    [SerializeField] private float _str = 1f;
     [SerializeField] private float mind;
     [SerializeField] private float def;
     [SerializeField] private float mdef;
     [SerializeField] private float mov;
+    public float str => _str;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -72,10 +73,8 @@ public class BasicEnemyController : MonoBehaviour
             float dmg = 1f;
             var attack = other.GetComponent<SwordAttackController>();
             if (attack != null)
-                dmg = attack.dmg;
-
-            vit -= dmg;
-            Debug.Log($"{gameObject.name} took {dmg} damage! Remaining HP: {vit}");
+                vit -= attack.dmg;
+            Debug.Log($"{gameObject.name} took {attack.dmg} damage! Remaining HP: {vit}");
 
 
             // Calculate pushback direction (from enemy to player)    

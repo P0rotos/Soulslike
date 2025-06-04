@@ -1,20 +1,24 @@
 using UnityEngine;
 using System.Collections;
 
-public class SlimeBossController : MonoBehaviour
+public class SlimeBossController : MonoBehaviour, IDamage
 {
     [Header("Stats")]
     [SerializeField] private float vit;
-    [SerializeField] private float str;
+    [SerializeField] private float _str = 2f;
     [SerializeField] private float mind;
     [SerializeField] private float def;
     [SerializeField] private float mdef;
     [SerializeField] private float mov;
+    [SerializeField] private float detectionRadius = 5f; 
+    [SerializeField] private float attackTimer = 5f; 
+    public float str => _str;
+    private bool attackflag = false;
 
+    BoxCollider2D boxCollider;
     private Rigidbody2D rb;
     private Animator anim;
-    public float speed;
-    public float detectionRadius = 5f; // Only chase if player is within this distance
+    public float speed;// Only chase if player is within this distance
     private Transform player;
     
     void OnValidate(){
@@ -29,6 +33,7 @@ public class SlimeBossController : MonoBehaviour
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,6 +51,24 @@ public class SlimeBossController : MonoBehaviour
         if (player != null){
             float distance = Vector2.Distance(transform.position, player.position);
             if (distance < detectionRadius){
+                attackTimer -= Time.deltaTime;
+                if (!attackflag){
+                    if (attackTimer <= 0f){
+                        anim.SetInteger("Attack", 1);
+                        boxCollider.enabled = false;
+                        SetMov(10.0f);
+                        attackflag = true;
+                        attackTimer = 3f; // Reset attack timer
+                    }
+                }else{                    
+                    if (attackTimer <= 0f){
+                        anim.SetInteger("Attack", 2);
+                        boxCollider.enabled = true;
+                        SetMov(8.0f);
+                        attackflag = false;
+                        attackTimer = 5f; // Reset attack timer
+                    }
+                }
                 // Move towards the player
                 Vector2 lastMoveDirection = (player.position - transform.position).normalized;
                 transform.position = Vector2.MoveTowards(
@@ -53,14 +76,23 @@ public class SlimeBossController : MonoBehaviour
                     player.position,
                     speed * Time.deltaTime
                 );
-                anim.SetInteger("Run", animDirection(lastMoveDirection));
+                anim.SetBool("Move", true);
             }else{
-                anim.SetInteger("Run", 0);
+                anim.SetBool("Move", false);
+                anim.SetInteger("Attack", 2);
+                boxCollider.enabled = true;
+                SetMov(8.0f);
+                attackflag = false;
+                attackTimer = 5f;
             }
         }
         if (vit <= 0){
             Destroy(gameObject);
             return;
+        }
+        AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);
+        if (anim.GetInteger("Attack") == 2 && state.IsName("attackDown") && state.normalizedTime >= 1f) {
+            anim.SetInteger("Attack", 0);
         }
     }
 
@@ -69,13 +101,10 @@ public class SlimeBossController : MonoBehaviour
         // You can add your game logic here, e.g., collect item, activate switch
         if (other.CompareTag("PlayerAttack")){
             // Get the damage from the attack object
-            float dmg = 1f;
             var attack = other.GetComponent<SwordAttackController>();
             if (attack != null)
-                dmg = attack.dmg;
-
-            vit -= dmg;
-            Debug.Log($"{gameObject.name} took {dmg} damage! Remaining HP: {vit}");
+                vit -= attack.dmg;
+            Debug.Log($"{gameObject.name} took {attack.dmg} damage! Remaining HP: {vit}");
 
 
             // Calculate pushback direction (from enemy to player)    
