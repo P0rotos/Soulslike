@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 public class SlimeBossController : MonoBehaviour, IDamage
 {
     [Header("Stats")]
-    [SerializeField] private float vit;
+    [SerializeField] private float vit = 10f;
     [SerializeField] private float _str = 2f;
     [SerializeField] private float mind;
     [SerializeField] private float def;
     [SerializeField] private float mdef;
-    [SerializeField] private float mov;
-    [SerializeField] private float detectionRadius = 5f; 
+    [SerializeField] private float mov = 8.0f;
+    [SerializeField] private float detectionRadius = 5f;
     [SerializeField] private float attackTimer = 5f; 
     public float str => _str;
     private bool attackflag = false;
@@ -19,29 +19,28 @@ public class SlimeBossController : MonoBehaviour, IDamage
     CapsuleCollider2D boxCollider;
     private Rigidbody2D rb;
     private Animator anim;
-    public float speed;// Only chase if player is within this distance
     private Transform player;
     private bool isPushedBack = false;
+    private UnityEngine.AI.NavMeshAgent agent;
     
     void OnValidate(){
-        speed = mov / 4f; // Or whatever logic you want
-    }
-
-    public void SetMov(float m){
-        mov = m;
-        speed = mov / 4f;
+        if (agent != null){
+            agent.speed = mov / 4f; 
+        }
     }
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<CapsuleCollider2D>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){   
-        SetMov(8.0f);     
-        vit = 10.0f;
+        agent.speed = mov / 4f;   
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
             player = playerObj.transform;
@@ -52,40 +51,7 @@ public class SlimeBossController : MonoBehaviour, IDamage
     void Update(){
         if (player != null){
             float distance = Vector2.Distance(transform.position, player.position);
-            if (distance < detectionRadius){
-                attackTimer -= Time.deltaTime;
-                if (!attackflag){
-                    if (attackTimer <= 0f){
-                        anim.SetInteger("Attack", 1);
-                        SetMov(10.0f);
-                        attackflag = true;
-                        attackTimer = 3f; // Reset attack timer
-                    }
-                }else{                    
-                    if (attackTimer <= 0f){
-                        anim.SetInteger("Attack", 2);
-                        SetMov(8.0f);
-                        attackflag = false;
-                        attackTimer = 5f; // Reset attack timer
-                    }
-                }
-                // Move towards the player
-                Vector2 lastMoveDirection = (player.position - transform.position).normalized;
-                rb.linearVelocity = lastMoveDirection * speed;
-                //transform.position = Vector2.MoveTowards(
-                //    transform.position,
-                //    player.position,
-                //    speed * Time.deltaTime
-                //);
-                anim.SetBool("Move", true);
-            }else{
-                rb.linearVelocity = Vector2.zero;
-                anim.SetBool("Move", false);
-                anim.SetInteger("Attack", 2);
-                SetMov(8.0f);
-                attackflag = false;
-                attackTimer = 5f;
-            }
+            Animate(distance);
         }
         if (vit <= 0){
             anim.SetBool("Died", true);
@@ -114,13 +80,50 @@ public class SlimeBossController : MonoBehaviour, IDamage
             StartCoroutine(PushbackCoroutine(pushDirection, pushForce, 0.2f));
         }
     }
-    
+
     IEnumerator PushbackCoroutine(Vector2 direction, float force, float duration){
         isPushedBack = true;
         rb.linearVelocity = direction * force;
         yield return new WaitForSeconds(duration);
         rb.linearVelocity = Vector2.zero;
         isPushedBack = false;
+    }
+
+    public void Animate(float distance){   
+        if (distance < detectionRadius){
+            attackTimer -= Time.deltaTime;
+            if (isPushedBack) return;  
+            if (!attackflag){
+                if (attackTimer <= 0f){
+                    anim.SetInteger("Attack", 1);
+                    mov = 10.0f;
+                    agent.speed = mov / 4f; 
+                    attackflag = true;
+                    attackTimer = 3f; 
+                }
+            }else{                    
+                if (attackTimer <= 0f){
+                    anim.SetInteger("Attack", 2);
+                    mov = 8.0f;
+                    agent.speed = mov / 4f; 
+                    attackflag = false;
+                    attackTimer = 5f; 
+                }
+            }
+            Vector2 lastMoveDirection = (player.position - transform.position).normalized;
+            agent.SetDestination(player.transform.position);
+            anim.SetBool("Move", true);
+        }else{
+            if (isPushedBack) return;  
+            agent.SetDestination(transform.position);
+            rb.linearVelocity = Vector2.zero;
+            anim.SetBool("Move", false);
+            anim.SetInteger("Attack", 2);
+            mov = 8.0f;
+            agent.speed = mov / 4f; 
+            attackflag = false;
+            attackTimer = 5f;
+        }
     }
 
     void OnDestroy() {

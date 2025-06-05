@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour
     [Header("Others")]
     [SerializeField] private float time = 0.5f;
     [SerializeField] private float attackOffset = 0.5f;
-    [SerializeField] private float dashspeed;
-    [SerializeField] private float rollspeed;
+    [SerializeField] private float dashspeed = 15.0f;
+    [SerializeField] private float rollspeed = 8.0f;
     [SerializeField] private float dashDuration = 0.3f; // Duration in seconds
     [SerializeField] private float rollDuration = 0.3f;
 
@@ -59,9 +59,7 @@ public class PlayerController : MonoBehaviour
 
     void Start(){
         SetMov(8.0f);
-        SetHealth(10.0f);
-        dashspeed = 15.0f;
-        rollspeed = 8.0f;
+        SetHealth(20.0f);
         attackSpawn = GameObject.Find("Attack_Spawn");
         if (attackSpawn == null){
             Debug.Log("PlayerController: Error, no se ha encontrado el objeto Attack_Spawn");
@@ -81,10 +79,6 @@ public class PlayerController : MonoBehaviour
         
         Animate(moveInput, h + joystick.Direction.x, v + joystick.Direction.y);
 
-        rb.linearVelocity = moveInput * speed;
-        if (moveInput.sqrMagnitude < 0.01f){
-            rb.linearVelocity = Vector2.zero;
-        }
         if (Input.GetKeyDown(KeyCode.LeftShift)){
             Dash();
         }
@@ -119,8 +113,8 @@ public class PlayerController : MonoBehaviour
 
             // Calculate pushback direction (from enemy to player)
             Vector2 pushDirection = (transform.position - collision.transform.position).normalized;
-            float pushForce = 3.0f;
-            StartCoroutine(PushbackCoroutine(pushDirection, pushForce, 0.1f));
+            float pushForce = 5.0f;
+            StartCoroutine(PushbackCoroutine(pushDirection, pushForce, 0.2f));
         }
     }
     void OnCollisionStay2D(Collision2D collision){
@@ -248,8 +242,10 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Run", true);//anim.SetInteger("Run", animDirection(moveInput.normalized));
             anim.SetFloat("X", h);
             anim.SetFloat("Y", v);
+            rb.linearVelocity = moveInput * speed;
         }else{
             anim.SetBool("Run", false);//anim.SetInteger("Run", 0);
+            rb.linearVelocity = Vector2.zero;
         }
     }
 

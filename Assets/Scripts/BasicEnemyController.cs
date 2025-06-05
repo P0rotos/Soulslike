@@ -9,33 +9,33 @@ public class BasicEnemyController : MonoBehaviour, IDamage
     [SerializeField] private float mind;
     [SerializeField] private float def;
     [SerializeField] private float mdef;
-    [SerializeField] private float mov;
+    [SerializeField] private float mov = 8.0f;
+    [SerializeField] private float detectionRadius = 5f;
     public float str => _str;
 
     private Rigidbody2D rb;
     private Animator anim;
-    public float speed;
-    public float detectionRadius = 5f; // Only chase if player is within this distance
     private Transform player;
     private bool isPushedBack = false;
+    private UnityEngine.AI.NavMeshAgent agent;
     
     void OnValidate(){
-        speed = mov / 4f; // Or whatever logic you want
-    }
-
-    public void SetMov(float m){
-        mov = m;
-        speed = mov / 4f;
+        if (agent != null){
+            agent.speed = mov / 4f; 
+        }
     }
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){   
-        SetMov(8.0f);    
+        agent.speed = mov / 4f;
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
             player = playerObj.transform;
@@ -46,18 +46,6 @@ public class BasicEnemyController : MonoBehaviour, IDamage
     void Update(){
         if (player != null){
             float distance = Vector2.Distance(transform.position, player.position);
-            //if (distance < detectionRadius){
-                // Move towards the player
-            //    Vector2 lastMoveDirection = (player.position - transform.position).normalized;
-            //    transform.position = Vector2.MoveTowards(
-            //        transform.position,
-            //        player.position,
-            //        speed * Time.deltaTime
-            //    );
-            //    anim.SetInteger("Run", animDirection(lastMoveDirection));
-            //}else{
-            //    anim.SetInteger("Run", 0);
-            //}
             Animate(distance);
         }
         if (vit <= 0){
@@ -98,18 +86,12 @@ public class BasicEnemyController : MonoBehaviour, IDamage
         if (distance < detectionRadius){
             // Move towards the player
             Vector2 lastMoveDirection = (player.position - transform.position).normalized;
-            rb.linearVelocity = lastMoveDirection * speed;
-
-            //transform.position = Vector2.MoveTowards(
-            //    transform.position,
-            //    player.position,
-            //    speed * Time.deltaTime
-            //);
-
+            agent.SetDestination(player.transform.position);
             anim.SetBool("Run", true);//anim.SetInteger("Run", animDirection(moveInput.normalized));
             anim.SetFloat("X", lastMoveDirection.x);
             anim.SetFloat("Y", lastMoveDirection.y);
         }else{
+            agent.SetDestination(transform.position);
             anim.SetBool("Run", false);
             rb.linearVelocity = Vector2.zero;
         }
