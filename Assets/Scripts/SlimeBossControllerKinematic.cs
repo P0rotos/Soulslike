@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class SlimeBossController : MonoBehaviour, IDamage
+public class SlimeBossControllerKinematic : MonoBehaviour, IDamage
 {
     [Header("Stats")]
     [SerializeField] private float vit;
@@ -21,7 +21,6 @@ public class SlimeBossController : MonoBehaviour, IDamage
     private Animator anim;
     public float speed;// Only chase if player is within this distance
     private Transform player;
-    private bool isPushedBack = false;
     
     void OnValidate(){
         speed = mov / 4f; // Or whatever logic you want
@@ -71,15 +70,13 @@ public class SlimeBossController : MonoBehaviour, IDamage
                 }
                 // Move towards the player
                 Vector2 lastMoveDirection = (player.position - transform.position).normalized;
-                rb.linearVelocity = lastMoveDirection * speed;
-                //transform.position = Vector2.MoveTowards(
-                //    transform.position,
-                //    player.position,
-                //    speed * Time.deltaTime
-                //);
+                transform.position = Vector2.MoveTowards(
+                    transform.position,
+                    player.position,
+                    speed * Time.deltaTime
+                );
                 anim.SetBool("Move", true);
             }else{
-                rb.linearVelocity = Vector2.zero;
                 anim.SetBool("Move", false);
                 anim.SetInteger("Attack", 2);
                 SetMov(8.0f);
@@ -110,19 +107,37 @@ public class SlimeBossController : MonoBehaviour, IDamage
 
             // Calculate pushback direction (from enemy to player)    
             Vector2 pushDirection = (transform.position - other.transform.position).normalized;
-            float pushForce = 4.0f; // Adjust this value as needed
-            StartCoroutine(PushbackCoroutine(pushDirection, pushForce, 0.2f));
+            float pushForce = 2.0f; // Adjust this value as needed
+            StartCoroutine(PushbackCoroutine(pushDirection, pushForce, 0.1f));
+        }
+        if (other.CompareTag("Enemy")){
+            // Calculate pushback direction (from enemy to player)    
+            Vector2 pushDirection = (transform.position - other.transform.position).normalized;
+            float pushForce = 0.1f; // Adjust this value as needed
+            StartCoroutine(PushbackCoroutine(pushDirection, pushForce, 0.1f));
         }
     }
-    
-    IEnumerator PushbackCoroutine(Vector2 direction, float force, float duration){
-        isPushedBack = true;
-        rb.linearVelocity = direction * force;
-        yield return new WaitForSeconds(duration);
-        rb.linearVelocity = Vector2.zero;
-        isPushedBack = false;
+
+    void OnTriggerExit2D(Collider2D other){
+        Debug.Log(gameObject.name + " exited trigger with " + other.gameObject.name);
     }
 
+    // Optional: Called every frame while the trigger is overlapping
+    void OnTriggerStay2D(Collider2D other){
+        // Debug.Log(gameObject.name + " is staying in trigger with " + other.gameObject.name);
+    }
+
+    IEnumerator PushbackCoroutine(Vector2 direction, float distance, float duration){
+        Vector3 start = transform.position;
+        Vector3 end = start + (Vector3)(direction * distance);
+        float elapsed = 0f;
+        while (elapsed < duration){
+            transform.position = Vector3.Lerp(start, end, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = end;
+    }
     void OnDestroy() {
         SceneManager.LoadSceneAsync(0);
     }

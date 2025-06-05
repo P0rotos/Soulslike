@@ -3,12 +3,12 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerKinematic : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
     private Vector2 lastMoveDirection = Vector2.right;
-    public static PlayerController instance;
+    public static PlayerControllerKinematic instance;
     private bool isAction = false;
     public Image healthBarFill;
 
@@ -39,8 +39,6 @@ public class PlayerController : MonoBehaviour
     public Joystick joystick;
     GameObject attack;
     private bool attackFlag = false;
-    private bool isPushedBack = false;
-    private float collisionDamageTimer = 0f;
     
     void OnValidate(){
         speed = mov / 4f; // Or whatever logic you want
@@ -70,7 +68,7 @@ public class PlayerController : MonoBehaviour
         UpdateHealthUI();
     }
     
-    void FixedUpdate(){        
+    void Update(){   
         if (isAction) return;
         if (health <= 0){
             Destroy(gameObject);
@@ -81,19 +79,27 @@ public class PlayerController : MonoBehaviour
         
         Animate(moveInput, h + joystick.Direction.x, v + joystick.Direction.y);
 
-        rb.linearVelocity = moveInput * speed;
-        if (moveInput.sqrMagnitude < 0.01f){
-            rb.linearVelocity = Vector2.zero;
-        }
+        Vector2 targetPosition = rb.position + moveInput * speed * Time.fixedDeltaTime;
+        
+        // Check for collision at the target position
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
+        filter.useTriggers = false;
+
+        RaycastHit2D[] results = new RaycastHit2D[1];
+        int hitCount = rb.Cast(moveInput.normalized, filter, results, (moveInput * speed * Time.fixedDeltaTime).magnitude);
+
+        if (hitCount == 0) {
+            rb.MovePosition(targetPosition);
+        } 
+
+        //rb.linearVelocity = moveInput * speed;
         if (Input.GetKeyDown(KeyCode.LeftShift)){
             Dash();
         }
         if (Input.GetKeyDown(KeyCode.Space)){
             Roll();
         }
-    }
-
-    void Update(){   
         UpdateHealthUI();
 
         if (health <= 0){            
@@ -109,38 +115,30 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision){
-        Debug.Log(gameObject.name + " collided with " + collision.gameObject.name);
-        if (collision.gameObject.CompareTag("Enemy")) {
-            var attack = collision.gameObject.GetComponent<IDamage>();
+    void OnTriggerEnter2D(Collider2D other){
+        Debug.Log(gameObject.name + " entered trigger with " + other.gameObject.name);
+        // You can add your game logic here, e.g., collect item, activate switch
+        if (other.CompareTag("Enemy")){            
+            // Get the damage from the attack object
+            var attack = other.GetComponent<IDamage>();
             if (attack != null)
                 health -= attack.str;
             Debug.Log($"{gameObject.name} took {attack.str} damage! Remaining HP: {health}");
 
-            // Calculate pushback direction (from enemy to player)
-            Vector2 pushDirection = (transform.position - collision.transform.position).normalized;
-            float pushForce = 3.0f;
+            // Calculate pushback direction (from enemy to player)    
+            Vector2 pushDirection = (transform.position - other.transform.position).normalized;
+            float pushForce = 1.0f; // Adjust this value as needed
             StartCoroutine(PushbackCoroutine(pushDirection, pushForce, 0.1f));
         }
     }
-    void OnCollisionStay2D(Collision2D collision){
-        if (collision.gameObject.CompareTag("Enemy")) {
-            collisionDamageTimer += Time.fixedDeltaTime;
-            if (collisionDamageTimer >= 0.5f) {
-                var attack = collision.gameObject.GetComponent<IDamage>();
-                if (attack != null) {
-                    health -= attack.str;
-                    Debug.Log($"{gameObject.name} is taking periodic damage! Remaining HP: {health}");
-                }
-                collisionDamageTimer = 0f; // Reset timer after applying damage
-            }
-        }
+
+    void OnTriggerExit2D(Collider2D other){
+        Debug.Log(gameObject.name + " exited trigger with " + other.gameObject.name);
     }
 
-    void OnCollisionExit2D(Collision2D collision){
-        if (collision.gameObject.CompareTag("Enemy")) {
-            collisionDamageTimer = 0f;
-        }
+    // Optional: Called every frame while the trigger is overlapping
+    void OnTriggerStay2D(Collider2D other){
+        // Debug.Log(gameObject.name + " is staying in trigger with " + other.gameObject.name);
     }
 
     public void Dash(){
@@ -181,7 +179,6 @@ public class PlayerController : MonoBehaviour
 
             var follow = attack.GetComponent<SwordAttackController>();
             if (follow != null){
-                follow.player = this;
                 follow.offset = offset;
                 follow.dmg = str;
                 //Destroy(attack, time);
@@ -195,30 +192,76 @@ public class PlayerController : MonoBehaviour
         Destroy(attack);
     }
 
-    IEnumerator DashCoroutine(){    
+    IEnumerator DashCoroutine(){
         isAction = true;
-        rb.linearVelocity = lastMoveDirection.normalized * dashspeed;
+        Vector3 start = transform.position;
+        Vector3 end = start + (Vector3)(lastMoveDirection.normalized * dashspeed * dashDuration);
+        float elapsed = 0f;
+        while (elapsed < dashDuration){
+            rb.MovePosition(Vector3.Lerp(start, end, elapsed / dashDuration));//transform.position = Vector3.Lerp(start, end, elapsed / dashDuration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        //transform.position = end;
+        /*rb.linearVelocity = Vector2.zero;
+        rb.AddForce(lastMoveDirection * dashspeed, ForceMode2D.Impulse);
+        Debug.Log("PlayerController: Dash");
+
         yield return new WaitForSeconds(dashDuration);
-        rb.linearVelocity = Vector2.zero;
+
+        rb.linearVelocity = Vector2.zero; // Stop movement after dash*/
         isAction = false;
     }
 
     IEnumerator RollCoroutine(){
         isAction = true;
         anim.SetBool("Roll", true);
-        rb.linearVelocity = lastMoveDirection.normalized * rollspeed;
-        yield return new WaitForSeconds(rollDuration);
-        rb.linearVelocity = Vector2.zero;
+        Vector3 start = transform.position;
+        Vector3 end = start + (Vector3)(lastMoveDirection.normalized * rollspeed * rollDuration);
+
+        // Store original scale
+        //Vector3 originalScale = transform.localScale;
+        // Reduce height (Y axis)
+        //transform.localScale = new Vector3(originalScale.x, originalScale.y * 0.5f, originalScale.z);
+
+        float elapsed = 0f;
+        while (elapsed < rollDuration){
+            rb.MovePosition(Vector3.Lerp(start, end, elapsed / rollDuration));//transform.position = Vector3.Lerp(start, end, elapsed / rollDuration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = end;
+
+        //transform.localScale = originalScale; // Restore original scale
         anim.SetBool("Roll", false);
         isAction = false;
+        /*isAction = true;
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(lastMoveDirection * rollspeed, ForceMode2D.Impulse);
+        Debug.Log("PlayerController: Roll");
+
+        // Store original scale
+        Vector3 originalScale = transform.localScale;
+        // Reduce height (Y axis)
+        transform.localScale = new Vector3(originalScale.x, originalScale.y * 0.5f, originalScale.z);
+
+        yield return new WaitForSeconds(rollDuration);
+
+        transform.localScale = originalScale;// Restore original scale
+        rb.linearVelocity = Vector2.zero; // Stop movement after roll
+        isAction = false;*/
     }
 
-    IEnumerator PushbackCoroutine(Vector2 direction, float force, float duration){
-        isPushedBack = true;
-        rb.linearVelocity = direction * force;
-        yield return new WaitForSeconds(duration);
-        rb.linearVelocity = Vector2.zero;
-        isPushedBack = false;
+    IEnumerator PushbackCoroutine(Vector2 direction, float distance, float duration){
+        Vector3 start = transform.position;
+        Vector3 end = start + (Vector3)(direction * distance);
+        float elapsed = 0f;
+        while (elapsed < duration){
+            transform.position = Vector3.Lerp(start, end, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = end;
     }
 
     public void SetMov(float m){
@@ -241,8 +284,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Animate(Vector2 moveInput, float h, float v){     
-        if (isPushedBack) return;     
+    public void Animate(Vector2 moveInput, float h, float v){        
         if (moveInput.sqrMagnitude > 0.01f){
             lastMoveDirection = moveInput.normalized;
             anim.SetBool("Run", true);//anim.SetInteger("Run", animDirection(moveInput.normalized));
