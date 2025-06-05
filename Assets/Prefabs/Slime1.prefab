@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vit: 0
-  str: 0
+  _str: 1
   mind: 0
   def: 0
   mdef: 0

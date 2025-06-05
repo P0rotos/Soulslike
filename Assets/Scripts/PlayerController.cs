@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] private float mov;
-    [SerializeField] private float str;
+    [SerializeField] private float str = 3.0f;
     [SerializeField] private float dex;
     [SerializeField] private float mind;
     [SerializeField] private float def;
@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     public float health;
     public Joystick joystick;
     GameObject attack;
+    private bool attackFlag = false;
     
     void OnValidate(){
         speed = mov / 4f; // Or whatever logic you want
@@ -59,7 +60,6 @@ public class PlayerController : MonoBehaviour
         SetHealth(10.0f);
         dashspeed = 15.0f;
         rollspeed = 8.0f;
-        str = 1f;
         attackSpawn = GameObject.Find("Attack_Spawn");
         if (attackSpawn == null){
             Debug.Log("PlayerController: Error, no se ha encontrado el objeto Attack_Spawn");
@@ -79,7 +79,21 @@ public class PlayerController : MonoBehaviour
         
         Animate(moveInput, h + joystick.Direction.x, v + joystick.Direction.y);
 
-        rb.linearVelocity = moveInput * speed;
+        Vector2 targetPosition = rb.position + moveInput * speed * Time.fixedDeltaTime;
+        
+        // Check for collision at the target position
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
+        filter.useTriggers = false;
+
+        RaycastHit2D[] results = new RaycastHit2D[1];
+        int hitCount = rb.Cast(moveInput.normalized, filter, results, (moveInput * speed * Time.fixedDeltaTime).magnitude);
+
+        if (hitCount == 0) {
+            rb.MovePosition(targetPosition);
+        } 
+
+        //rb.linearVelocity = moveInput * speed;
         if (Input.GetKeyDown(KeyCode.LeftShift)){
             Dash();
         }
@@ -136,29 +150,46 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Attack(){
-        anim.SetBool("Attack", true);
-        Debug.Log("PlayerController: Attack");
-        Transform spawnTransform = attackSpawn.transform;
-        
-        Vector3 offset = (Vector3)lastMoveDirection * attackOffset;
-        Vector3 spawnPosition = spawnTransform.position + offset;
+        if(!attackFlag){
+            anim.SetBool("Attack", true);
+            attackFlag=true;
+            Debug.Log("PlayerController: Attack");
+            Transform spawnTransform = attackSpawn.transform;
 
-        float angle = Mathf.Atan2(lastMoveDirection.y, lastMoveDirection.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.Euler(0, 0, angle);
+            // Snap lastMoveDirection to the nearest cardinal direction
+            Vector2 dir = lastMoveDirection;
+            if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y)) {
+                dir = new Vector2(Mathf.Sign(dir.x), 0); // Left or Right
+            } else {
+                dir = new Vector2(0, Mathf.Sign(dir.y)); // Up or Down
+            }
+                
+            Vector3 offset = (Vector3)dir * attackOffset;
+            Vector3 spawnPosition = spawnTransform.position + offset;
 
-        attack = Instantiate<GameObject>(prefabAttack, spawnPosition, rotation);
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.Euler(0, 0, angle);
 
-        var follow = attack.GetComponent<SwordAttackController>();
-        if (follow != null){
-            follow.player = this;
-            follow.offset = offset;
-            follow.dmg = str;
-            //Destroy(attack, time);
+            attack = Instantiate<GameObject>(prefabAttack, spawnPosition, rotation);
+
+            if (dir.y != 0 || dir.x < 0) {
+                Vector3 scale = attack.transform.localScale;
+                attack.transform.localScale = new Vector3(scale.x, -Mathf.Abs(scale.y), scale.z);
+            }
+
+            var follow = attack.GetComponent<SwordAttackController>();
+            if (follow != null){
+                follow.player = this;
+                follow.offset = offset;
+                follow.dmg = str;
+                //Destroy(attack, time);
+            }
         }
     }
 
     public void endAttack(){
         anim.SetBool("Attack", false);
+        attackFlag = false;
         Destroy(attack);
     }
 
@@ -168,11 +199,11 @@ public class PlayerController : MonoBehaviour
         Vector3 end = start + (Vector3)(lastMoveDirection.normalized * dashspeed * dashDuration);
         float elapsed = 0f;
         while (elapsed < dashDuration){
-            transform.position = Vector3.Lerp(start, end, elapsed / dashDuration);
+            rb.MovePosition(Vector3.Lerp(start, end, elapsed / dashDuration));//transform.position = Vector3.Lerp(start, end, elapsed / dashDuration);
             elapsed += Time.deltaTime;
             yield return null;
         }
-        transform.position = end;
+        //transform.position = end;
         /*rb.linearVelocity = Vector2.zero;
         rb.AddForce(lastMoveDirection * dashspeed, ForceMode2D.Impulse);
         Debug.Log("PlayerController: Dash");
@@ -185,23 +216,25 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator RollCoroutine(){
         isAction = true;
+        anim.SetBool("Roll", true);
         Vector3 start = transform.position;
         Vector3 end = start + (Vector3)(lastMoveDirection.normalized * rollspeed * rollDuration);
 
         // Store original scale
-        Vector3 originalScale = transform.localScale;
+        //Vector3 originalScale = transform.localScale;
         // Reduce height (Y axis)
-        transform.localScale = new Vector3(originalScale.x, originalScale.y * 0.5f, originalScale.z);
+        //transform.localScale = new Vector3(originalScale.x, originalScale.y * 0.5f, originalScale.z);
 
         float elapsed = 0f;
         while (elapsed < rollDuration){
-            transform.position = Vector3.Lerp(start, end, elapsed / rollDuration);
+            rb.MovePosition(Vector3.Lerp(start, end, elapsed / rollDuration));//transform.position = Vector3.Lerp(start, end, elapsed / rollDuration);
             elapsed += Time.deltaTime;
             yield return null;
         }
         transform.position = end;
 
-        transform.localScale = originalScale; // Restore original scale
+        //transform.localScale = originalScale; // Restore original scale
+        anim.SetBool("Roll", false);
         isAction = false;
         /*isAction = true;
         rb.linearVelocity = Vector2.zero;
@@ -245,7 +278,10 @@ public class PlayerController : MonoBehaviour
     void UpdateHealthUI(){
         // Update the fill amount of the health bar
         if (healthBarFill != null){
-            healthBarFill.fillAmount = health / vit;
+            float minFill = 0.12f;
+            float maxFill = 0.9f;
+            float t = Mathf.Clamp01(health / vit);
+            healthBarFill.fillAmount = Mathf.Lerp(minFill, maxFill, t);
         }
     }
 
@@ -258,7 +294,6 @@ public class PlayerController : MonoBehaviour
         }else{
             anim.SetBool("Run", false);//anim.SetInteger("Run", 0);
         }
-
     }
 
     public void OnAttackEnded() {

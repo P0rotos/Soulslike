@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SlimeBossController : MonoBehaviour, IDamage
 {
@@ -15,7 +16,7 @@ public class SlimeBossController : MonoBehaviour, IDamage
     public float str => _str;
     private bool attackflag = false;
 
-    BoxCollider2D boxCollider;
+    CapsuleCollider2D boxCollider;
     private Rigidbody2D rb;
     private Animator anim;
     public float speed;// Only chase if player is within this distance
@@ -33,7 +34,7 @@ public class SlimeBossController : MonoBehaviour, IDamage
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<CapsuleCollider2D>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -55,7 +56,6 @@ public class SlimeBossController : MonoBehaviour, IDamage
                 if (!attackflag){
                     if (attackTimer <= 0f){
                         anim.SetInteger("Attack", 1);
-                        boxCollider.enabled = false;
                         SetMov(10.0f);
                         attackflag = true;
                         attackTimer = 3f; // Reset attack timer
@@ -63,7 +63,6 @@ public class SlimeBossController : MonoBehaviour, IDamage
                 }else{                    
                     if (attackTimer <= 0f){
                         anim.SetInteger("Attack", 2);
-                        boxCollider.enabled = true;
                         SetMov(8.0f);
                         attackflag = false;
                         attackTimer = 5f; // Reset attack timer
@@ -80,14 +79,13 @@ public class SlimeBossController : MonoBehaviour, IDamage
             }else{
                 anim.SetBool("Move", false);
                 anim.SetInteger("Attack", 2);
-                boxCollider.enabled = true;
                 SetMov(8.0f);
                 attackflag = false;
                 attackTimer = 5f;
             }
         }
         if (vit <= 0){
-            Destroy(gameObject);
+            anim.SetBool("Died", true);
             return;
         }
         AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);
@@ -140,12 +138,14 @@ public class SlimeBossController : MonoBehaviour, IDamage
         }
         transform.position = end;
     }
-
-    int animDirection(Vector2 dir){
-        // Example: 0 = right, 1 = up, 2 = left, 3 = down    
-        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
-            return dir.x > 0 ? 2 : 1; // 1: 2
-        else
-            return dir.y > 0 ? 3 : 4; // 3 : 4
+    void OnDestroy() {
+        SceneManager.LoadSceneAsync(0);
+    }
+    
+    public void Dead(){
+        Destroy(gameObject);
+    }
+    public void ColliderOnOff(){
+        boxCollider.enabled = !boxCollider.enabled;
     }
 }

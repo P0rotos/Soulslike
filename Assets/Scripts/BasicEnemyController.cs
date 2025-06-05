@@ -4,7 +4,7 @@ using System.Collections;
 public class BasicEnemyController : MonoBehaviour, IDamage
 {
     [Header("Stats")]
-    [SerializeField] private float vit;
+    [SerializeField] private float vit = 10.0f;
     [SerializeField] private float _str = 1f;
     [SerializeField] private float mind;
     [SerializeField] private float def;
@@ -34,8 +34,7 @@ public class BasicEnemyController : MonoBehaviour, IDamage
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){   
-        SetMov(8.0f);     
-        vit = 10.0f;
+        SetMov(8.0f);    
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
             player = playerObj.transform;
@@ -46,18 +45,19 @@ public class BasicEnemyController : MonoBehaviour, IDamage
     void Update(){
         if (player != null){
             float distance = Vector2.Distance(transform.position, player.position);
-            if (distance < detectionRadius){
+            //if (distance < detectionRadius){
                 // Move towards the player
-                Vector2 lastMoveDirection = (player.position - transform.position).normalized;
-                transform.position = Vector2.MoveTowards(
-                    transform.position,
-                    player.position,
-                    speed * Time.deltaTime
-                );
-                anim.SetInteger("Run", animDirection(lastMoveDirection));
-            }else{
-                anim.SetInteger("Run", 0);
-            }
+            //    Vector2 lastMoveDirection = (player.position - transform.position).normalized;
+            //    transform.position = Vector2.MoveTowards(
+            //        transform.position,
+            //        player.position,
+            //        speed * Time.deltaTime
+            //    );
+            //    anim.SetInteger("Run", animDirection(lastMoveDirection));
+            //}else{
+            //    anim.SetInteger("Run", 0);
+            //}
+            Animate(distance);
         }
         if (vit <= 0){
             Destroy(gameObject);
@@ -111,11 +111,35 @@ public class BasicEnemyController : MonoBehaviour, IDamage
         transform.position = end;
     }
 
-    int animDirection(Vector2 dir){
-        // Example: 0 = right, 1 = up, 2 = left, 3 = down    
-        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
-            return dir.x > 0 ? 2 : 1; // 1: 2
-        else
-            return dir.y > 0 ? 3 : 4; // 3 : 4
+    public void Animate(float distance){        
+        if (distance < detectionRadius){
+            // Move towards the player
+            Vector2 lastMoveDirection = (player.position - transform.position).normalized;
+            Vector2 targetPosition = rb.position + lastMoveDirection * speed * Time.deltaTime;
+            //transform.position = Vector2.MoveTowards(
+            //    transform.position,
+            //    player.position,
+            //    speed * Time.deltaTime
+            //);
+
+            // Collision check temp
+            ContactFilter2D filter = new ContactFilter2D();
+            filter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
+            filter.useTriggers = false;
+
+            RaycastHit2D[] results = new RaycastHit2D[1];
+            int hitCount = rb.Cast(lastMoveDirection.normalized, filter, results, (lastMoveDirection * speed * Time.deltaTime).magnitude);
+
+            if (hitCount == 0) {
+                rb.MovePosition(targetPosition);
+            }
+
+
+            anim.SetBool("Run", true);//anim.SetInteger("Run", animDirection(moveInput.normalized));
+            anim.SetFloat("X", lastMoveDirection.x);
+            anim.SetFloat("Y", lastMoveDirection.y);
+        }else{
+            anim.SetBool("Run", false);
+        }
     }
 }

@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vit: 0
-  str: 0
+  _str: 1
   mind: 0
   def: 0
   mdef: 0
@@ -172,7 +172,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.03, y: 0}
+  m_Offset: {x: 0.0146507025, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -182,7 +182,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.58, y: 0.7}
+  m_Size: {x: 0.49069858, y: 0.7}
   m_EdgeRadius: 0
 --- !u!95 &8607508242268392635
 Animator:
