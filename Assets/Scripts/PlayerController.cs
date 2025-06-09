@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IStats
 {
     private Rigidbody2D rb;
     private Animator anim;
@@ -13,21 +13,14 @@ public class PlayerController : MonoBehaviour
     public Image healthBarFill;
 
     [Header("Stats")]
-    [SerializeField] private float mov;
-    [SerializeField] private float str = 3.0f;
-    [SerializeField] private float dex;
-    [SerializeField] private float mind;
-    [SerializeField] private float def;
-    [SerializeField] private float mdef;
-    [SerializeField] private float vit;
-    [SerializeField] private float res;
+    [SerializeField] protected float detectionRadius = 5f;
+    [SerializeField] public Stats stats = new Stats();
+    Stats IStats.stats => stats;
 
     [Header("Prefabs")]
     public GameObject prefabAttack;
-    public GameObject attackSpawn;
 
     [Header("Others")]
-    [SerializeField] private float time = 0.5f;
     [SerializeField] private float attackOffset = 0.5f;
     [SerializeField] private float dashspeed = 15.0f;
     [SerializeField] private float rollspeed = 8.0f;
@@ -43,8 +36,8 @@ public class PlayerController : MonoBehaviour
     private float collisionDamageTimer = 0f;
     
     void OnValidate(){
-        speed = mov / 4f; // Or whatever logic you want
-        health = vit;
+        speed = stats.mov / 4f; // Or whatever logic you want
+        health = stats.vit;
     }
 
     void Awake(){
@@ -60,10 +53,6 @@ public class PlayerController : MonoBehaviour
     void Start(){
         SetMov(8.0f);
         SetHealth(20.0f);
-        attackSpawn = GameObject.Find("Attack_Spawn");
-        if (attackSpawn == null){
-            Debug.Log("PlayerController: Error, no se ha encontrado el objeto Attack_Spawn");
-        }
         joystick = GameObject.Find("Fixed Joystick").GetComponent<Joystick>();
         UpdateHealthUI();
     }
@@ -106,10 +95,10 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
         Debug.Log(gameObject.name + " collided with " + collision.gameObject.name);
         if (collision.gameObject.CompareTag("Enemy")) {
-            var attack = collision.gameObject.GetComponent<IDamage>();
+            var attack = collision.gameObject.GetComponent<IStats>();
             if (attack != null)
-                health -= attack.str;
-            Debug.Log($"{gameObject.name} took {attack.str} damage! Remaining HP: {health}");
+                health -= attack.stats.str;
+            Debug.Log($"{gameObject.name} took {attack.stats.str} damage! Remaining HP: {health}");
 
             // Calculate pushback direction (from enemy to player)
             Vector2 pushDirection = (transform.position - collision.transform.position).normalized;
@@ -150,8 +139,6 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Attack", true);
             attackFlag=true;
             Debug.Log("PlayerController: Attack");
-            Transform spawnTransform = attackSpawn.transform;
-
             // Snap lastMoveDirection to the nearest cardinal direction
             Vector2 dir = lastMoveDirection;
             if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y)) {
@@ -161,7 +148,7 @@ public class PlayerController : MonoBehaviour
             }
                 
             Vector3 offset = (Vector3)dir * attackOffset;
-            Vector3 spawnPosition = spawnTransform.position + offset;
+            Vector3 spawnPosition = transform.position + offset;
 
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.Euler(0, 0, angle);
@@ -177,8 +164,7 @@ public class PlayerController : MonoBehaviour
             if (follow != null){
                 follow.player = this;
                 follow.offset = offset;
-                follow.dmg = str;
-                //Destroy(attack, time);
+                follow.dmg = stats.str;
             }
         }
     }
@@ -216,13 +202,13 @@ public class PlayerController : MonoBehaviour
     }
 
     public void SetMov(float m){
-        mov = m;
-        speed = mov / 4f;
+        stats.mov = m;
+        speed = stats.mov / 4f;
     }
 
     public void SetHealth(float h){
-        vit = h;
-        health = vit;
+        stats.vit = h;
+        health = stats.vit;
     }
 
     void UpdateHealthUI(){
@@ -230,7 +216,7 @@ public class PlayerController : MonoBehaviour
         if (healthBarFill != null){
             float minFill = 0.12f;
             float maxFill = 0.9f;
-            float t = Mathf.Clamp01(health / vit);
+            float t = Mathf.Clamp01(health / stats.vit);
             healthBarFill.fillAmount = Mathf.Lerp(minFill, maxFill, t);
         }
     }
