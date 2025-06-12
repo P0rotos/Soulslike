@@ -1,4 +1,7 @@
+using UnityEngine;
+
 public interface IDamage
 {
-    float str { get; }
+    float dmg { get; }
+    Vector3 offset { get; }
 }

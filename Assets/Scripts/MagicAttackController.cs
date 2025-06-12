@@ -1,19 +1,16 @@
 using UnityEngine;
 
-public class SwordAttackController : MonoBehaviour, IDamage{
+public class SwordAttackController : MonoBehaviour{
     /*public float rotspeed = 180f;
     public float maxAngle = -180f;*/
     public PlayerController player;
     public Vector3 offset;
-    public float time = 0.2f;
     public float dmg = 1f;
     
     void Start(){
         Debug.Log("SwordAttackController created at: " + Time.time);
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        player = playerObj.GetComponent<PlayerController>();
     }
-    
+
     void Update(){
         if (player.transform != null){
             transform.position = player.transform.position + offset;

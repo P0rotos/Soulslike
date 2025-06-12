@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour, IStats
     [SerializeField] private float rollDuration = 0.3f;
 
     private float speed;
+    private char attackType = 0;
     public float health;
     public Joystick joystick;
     GameObject attack;
@@ -73,6 +74,21 @@ public class PlayerController : MonoBehaviour, IStats
         }
         if (Input.GetKeyDown(KeyCode.Space)){
             Roll();
+        }
+        if (Input.GetKeyDown(KeyCode.LeftControl)){
+            attackType = (attackType+1)%4;
+            if(attackType == 0){
+                prefabAttack = Resources.Load<GameObject>("SwordAttack");
+            }
+            if(attackType == 1){
+                prefabAttack = Resources.Load<GameObject>("MagicAttack");
+            }
+            if(attackType == 2){
+                prefabAttack = Resources.Load<GameObject>("DaggerAttack");
+            }
+            if(attackType == 3){
+                prefabAttack = Resources.Load<GameObject>("BowAttack");
+            }
         }
     }
 
