@@ -187,6 +187,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -797,7 +810,34 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RA_Pyramid_Doors_0: 2625643256558071529
+      RA_Pyramid_Doors_1: -604700162774512272
+      RA_Pyramid_Doors_10: -8016042070509057430
+      RA_Pyramid_Doors_11: 2152420136615069957
+      RA_Pyramid_Doors_12: -5368142210807713042
+      RA_Pyramid_Doors_13: 5795252129690854697
+      RA_Pyramid_Doors_14: 6434318890147377677
+      RA_Pyramid_Doors_15: -5214278944408325789
+      RA_Pyramid_Doors_16: 4504989564795959400
+      RA_Pyramid_Doors_17: 3496755933151135133
+      RA_Pyramid_Doors_18: -492127339224847838
+      RA_Pyramid_Doors_19: 1475699921544636888
+      RA_Pyramid_Doors_2: 6003495254078952815
+      RA_Pyramid_Doors_20: -5854228216678544908
+      RA_Pyramid_Doors_21: -7991665217155742420
+      RA_Pyramid_Doors_22: 2987648088012942959
+      RA_Pyramid_Doors_23: 7800248594635477721
+      RA_Pyramid_Doors_24: 2920360946522445854
+      RA_Pyramid_Doors_25: -1914767231085661441
+      RA_Pyramid_Doors_26: 6309051048827598770
+      RA_Pyramid_Doors_3: -3803151582217023789
+      RA_Pyramid_Doors_4: -2662445544131500832
+      RA_Pyramid_Doors_5: -2698967144690057955
+      RA_Pyramid_Doors_6: -1621815358624950078
+      RA_Pyramid_Doors_7: -4652860141252209337
+      RA_Pyramid_Doors_8: -2773830693449575018
+      RA_Pyramid_Doors_9: -6652758405876448988
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

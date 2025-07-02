@@ -226,6 +226,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1122,7 +1135,47 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '!RA_Pyramid_Animations02_0': 7330073490729901286
+      '!RA_Pyramid_Animations02_1': 7372938987806184484
+      '!RA_Pyramid_Animations02_10': -6190057301571921088
+      '!RA_Pyramid_Animations02_11': 2439693654113298193
+      '!RA_Pyramid_Animations02_12': -7055588923415503947
+      '!RA_Pyramid_Animations02_13': 1134324850434074188
+      '!RA_Pyramid_Animations02_14': -6982150561211419337
+      '!RA_Pyramid_Animations02_15': 8362888856140591273
+      '!RA_Pyramid_Animations02_16': -5391423549815812248
+      '!RA_Pyramid_Animations02_17': -483922266857694412
+      '!RA_Pyramid_Animations02_18': 895144663149367723
+      '!RA_Pyramid_Animations02_19': -5850655105842883783
+      '!RA_Pyramid_Animations02_2': 7433482109445544548
+      '!RA_Pyramid_Animations02_20': 6697559604831029503
+      '!RA_Pyramid_Animations02_21': 195457989212403352
+      '!RA_Pyramid_Animations02_22': -2985979388540482401
+      '!RA_Pyramid_Animations02_23': 4973549595825254757
+      '!RA_Pyramid_Animations02_24': -6251927225139946293
+      '!RA_Pyramid_Animations02_25': -7044918301337249439
+      '!RA_Pyramid_Animations02_26': 896253608151433971
+      '!RA_Pyramid_Animations02_27': -1982074095039094846
+      '!RA_Pyramid_Animations02_28': -1204234655078473000
+      '!RA_Pyramid_Animations02_29': 658412093256073427
+      '!RA_Pyramid_Animations02_3': -7544030506335660059
+      '!RA_Pyramid_Animations02_30': -8636086954459304881
+      '!RA_Pyramid_Animations02_31': 2178332275598322059
+      '!RA_Pyramid_Animations02_32': 2397790398387294295
+      '!RA_Pyramid_Animations02_33': 5399552950345982244
+      '!RA_Pyramid_Animations02_34': -6660324860631408513
+      '!RA_Pyramid_Animations02_35': 5509315752062956811
+      '!RA_Pyramid_Animations02_36': -5388404981555282682
+      '!RA_Pyramid_Animations02_37': -4305646716041377240
+      '!RA_Pyramid_Animations02_38': -7089315910929723443
+      '!RA_Pyramid_Animations02_39': 1386531621642947572
+      '!RA_Pyramid_Animations02_4': 3823600828799376774
+      '!RA_Pyramid_Animations02_5': -8251394644654863951
+      '!RA_Pyramid_Animations02_6': 1181977559461276614
+      '!RA_Pyramid_Animations02_7': -5539404607190465771
+      '!RA_Pyramid_Animations02_8': -5414166381276603082
+      '!RA_Pyramid_Animations02_9': 7130829452965057626
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

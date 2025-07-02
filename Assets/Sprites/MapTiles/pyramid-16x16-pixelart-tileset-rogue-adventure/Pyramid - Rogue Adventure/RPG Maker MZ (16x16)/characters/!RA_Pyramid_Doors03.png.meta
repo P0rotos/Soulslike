@@ -154,6 +154,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -522,7 +535,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '!RA_Pyramid_Doors03_0': -7215873451692745576
+      '!RA_Pyramid_Doors03_1': -3717578986913672391
+      '!RA_Pyramid_Doors03_10': -8925379966223153463
+      '!RA_Pyramid_Doors03_11': -5702481867731633672
+      '!RA_Pyramid_Doors03_12': 6638311801446797708
+      '!RA_Pyramid_Doors03_13': 7598344287746161581
+      '!RA_Pyramid_Doors03_14': 7427975032228691789
+      '!RA_Pyramid_Doors03_15': 6423457059328569595
+      '!RA_Pyramid_Doors03_2': 8584544523185552795
+      '!RA_Pyramid_Doors03_3': 9138832115759504258
+      '!RA_Pyramid_Doors03_4': 7811420796321248008
+      '!RA_Pyramid_Doors03_5': -6468808397785538690
+      '!RA_Pyramid_Doors03_6': -3379543956531216048
+      '!RA_Pyramid_Doors03_7': -8066135677989421922
+      '!RA_Pyramid_Doors03_8': -5940621984581296901
+      '!RA_Pyramid_Doors03_9': -7162732165243927050
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

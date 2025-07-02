@@ -223,6 +223,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1097,7 +1110,46 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tileB_outside_0: -2892026133505617359
+      tileB_outside_1: -6094337456662156105
+      tileB_outside_10: -1527997576796625267
+      tileB_outside_11: -4792473710144579424
+      tileB_outside_12: -3600210021704367228
+      tileB_outside_13: 1162762936449737359
+      tileB_outside_14: 3518963028546513203
+      tileB_outside_15: 1163653856745355637
+      tileB_outside_16: 7346013243649127396
+      tileB_outside_17: -2781154661811706985
+      tileB_outside_18: 7656244469601374221
+      tileB_outside_19: 7313784892877084771
+      tileB_outside_2: -499056583542849104
+      tileB_outside_20: -1335551909570119538
+      tileB_outside_21: 5269988204630927610
+      tileB_outside_22: -6144961739098680959
+      tileB_outside_23: 5765405567328902537
+      tileB_outside_24: -7827219245620076902
+      tileB_outside_25: 7438264627506460439
+      tileB_outside_26: 5386051666526535732
+      tileB_outside_27: 5320099769994309011
+      tileB_outside_28: -7921299399027373859
+      tileB_outside_29: -7385067573250521389
+      tileB_outside_3: 708021893043574354
+      tileB_outside_30: 6187358993691816611
+      tileB_outside_31: 8987914933366864176
+      tileB_outside_32: -3495146555912516083
+      tileB_outside_33: -395759657852713266
+      tileB_outside_34: 2942512590395719245
+      tileB_outside_35: -1097521569782099010
+      tileB_outside_36: -6301145213173229314
+      tileB_outside_37: 2999598609647273431
+      tileB_outside_38: 394862604924993792
+      tileB_outside_4: -7675113760927427352
+      tileB_outside_5: -2195258596986609121
+      tileB_outside_6: 1215374163993653132
+      tileB_outside_7: -6855843215266445581
+      tileB_outside_8: 6068415696869390376
+      tileB_outside_9: 4857821092333049095
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

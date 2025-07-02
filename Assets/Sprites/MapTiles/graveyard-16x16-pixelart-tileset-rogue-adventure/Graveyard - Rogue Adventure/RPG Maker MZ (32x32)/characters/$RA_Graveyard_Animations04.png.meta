@@ -142,6 +142,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -422,7 +435,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      $RA_Graveyard_Animations04_0: -2071074619538012777
+      $RA_Graveyard_Animations04_1: 6658781040218727085
+      $RA_Graveyard_Animations04_10: -4035602334235175574
+      $RA_Graveyard_Animations04_11: 6605711191354792248
+      $RA_Graveyard_Animations04_2: -1710480471621093727
+      $RA_Graveyard_Animations04_3: -4981012521494205705
+      $RA_Graveyard_Animations04_4: 155552461036226578
+      $RA_Graveyard_Animations04_5: -607058648710652180
+      $RA_Graveyard_Animations04_6: 7870672498014369820
+      $RA_Graveyard_Animations04_7: 7549614694476303800
+      $RA_Graveyard_Animations04_8: -1397450960632101571
+      $RA_Graveyard_Animations04_9: 3247919025465017869
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

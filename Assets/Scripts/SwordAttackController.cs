@@ -4,14 +4,19 @@ public class SwordAttackController : MonoBehaviour, IDamage{
     /*public float rotspeed = 180f;
     public float maxAngle = -180f;*/
     public PlayerController player;
-    public Vector3 offset;
+    [SerializeField] private float _dmg = 1f;
+    [SerializeField] private Vector3 _offset = Vector3.forward;
+
+    public float dmg => _dmg;
+    public Vector3 offset => _offset;
+
     public float time = 0.2f;
-    public float dmg = 1f;
     
     void Start(){
         Debug.Log("SwordAttackController created at: " + Time.time);
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         player = playerObj.GetComponent<PlayerController>();
+        Destroy(GameObject, time);
     }
     
     void Update(){
@@ -30,7 +35,7 @@ public class SwordAttackController : MonoBehaviour, IDamage{
         transform.rotation = Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z-rotspeed-(Time.deltaTime*rotspeed));
         if (transform.rotation.eulerAngles.z <= maxAngle){
             Debug.Log("SwordAttackController: Destroying sword attack");
-            Destroy(gameObject);
+            Destroy(gameObject, time);
         }
     }*/
 }

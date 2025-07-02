@@ -343,6 +343,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -2097,7 +2110,86 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tileB_inside_0: -8410281857837603944
+      tileB_inside_1: -5978550033534667938
+      tileB_inside_10: -6800332431249391133
+      tileB_inside_11: 8825960747991281330
+      tileB_inside_12: -8024715302005194803
+      tileB_inside_13: 6916726590484020068
+      tileB_inside_14: 739766029391499564
+      tileB_inside_15: -2048364382483847945
+      tileB_inside_16: -7795474714748936257
+      tileB_inside_17: 3905369216878475433
+      tileB_inside_18: 2738607972748290349
+      tileB_inside_19: 2227736643383095433
+      tileB_inside_2: -6143144887596310960
+      tileB_inside_20: 4828000542842399382
+      tileB_inside_21: 960000732377842781
+      tileB_inside_22: -3659169356301618788
+      tileB_inside_23: -6364522147614464953
+      tileB_inside_24: 766555866632702598
+      tileB_inside_25: 493357214627574858
+      tileB_inside_26: 4133778994381769579
+      tileB_inside_27: 7249176754064276896
+      tileB_inside_28: -6772905330696972051
+      tileB_inside_29: -8774088948854346786
+      tileB_inside_3: -6877646186011531246
+      tileB_inside_30: 5626440100753161726
+      tileB_inside_31: 7934714262148970275
+      tileB_inside_32: 7975368437547705666
+      tileB_inside_33: 3286789003054040748
+      tileB_inside_34: -315742816392805554
+      tileB_inside_35: 1259698731290049885
+      tileB_inside_36: -8066057008986568479
+      tileB_inside_37: -798623733318676300
+      tileB_inside_38: 4053626767616914510
+      tileB_inside_39: -5525590926035317563
+      tileB_inside_4: -8177170132566495090
+      tileB_inside_40: -7288533203896391548
+      tileB_inside_41: 1946372664863014503
+      tileB_inside_42: 9094423933599468866
+      tileB_inside_43: 1580770725201142622
+      tileB_inside_44: 8476491116964840813
+      tileB_inside_45: -3736370855651448590
+      tileB_inside_46: 2710958273845551743
+      tileB_inside_47: -6196910703068959203
+      tileB_inside_48: 1774138822163177623
+      tileB_inside_49: -716112983738205420
+      tileB_inside_5: 3734051515894795825
+      tileB_inside_50: -1892042790284115862
+      tileB_inside_51: -1312437346608397823
+      tileB_inside_52: -1482040712699117978
+      tileB_inside_53: -573319572247412016
+      tileB_inside_54: -1410865911542356170
+      tileB_inside_55: -5132300021394185254
+      tileB_inside_56: -7397378338398131340
+      tileB_inside_57: -9013574931625508554
+      tileB_inside_58: 7163606858125556535
+      tileB_inside_59: 6942468287176003610
+      tileB_inside_6: 3284930498756972072
+      tileB_inside_60: 5794933603413135428
+      tileB_inside_61: -7799967172517656776
+      tileB_inside_62: 1382906996147343866
+      tileB_inside_63: -5285895790697893339
+      tileB_inside_64: 4164127609184323690
+      tileB_inside_65: 3751657661783930383
+      tileB_inside_66: -7616015611469632392
+      tileB_inside_67: 6530196578574705354
+      tileB_inside_68: 7893144476034664738
+      tileB_inside_69: 982507423572203967
+      tileB_inside_7: 5978285861715182405
+      tileB_inside_70: 9165533448477211084
+      tileB_inside_71: -3057515320989673238
+      tileB_inside_72: -7861830746946794713
+      tileB_inside_73: -2343373919032060001
+      tileB_inside_74: 4444549075268074484
+      tileB_inside_75: -4990613077872110031
+      tileB_inside_76: 8114252624580274550
+      tileB_inside_77: -4642472775432319093
+      tileB_inside_78: 8844297379641861397
+      tileB_inside_8: -8766670589876923457
+      tileB_inside_9: 3328660036478286860
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

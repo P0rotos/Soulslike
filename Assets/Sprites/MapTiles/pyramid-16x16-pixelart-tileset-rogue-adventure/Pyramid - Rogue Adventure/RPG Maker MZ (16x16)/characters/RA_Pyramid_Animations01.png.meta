@@ -394,6 +394,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -2522,7 +2535,103 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RA_Pyramid_Animations01_0: 8786754234872064376
+      RA_Pyramid_Animations01_1: -1268770241430793829
+      RA_Pyramid_Animations01_10: 2522134791348460989
+      RA_Pyramid_Animations01_11: -9088473312576336621
+      RA_Pyramid_Animations01_12: 8837530278462691946
+      RA_Pyramid_Animations01_13: 637926755563152522
+      RA_Pyramid_Animations01_14: -2249337133791859564
+      RA_Pyramid_Animations01_15: 2492811644009845242
+      RA_Pyramid_Animations01_16: 6765635353917551988
+      RA_Pyramid_Animations01_17: -1682910055647992859
+      RA_Pyramid_Animations01_18: 80683601361987332
+      RA_Pyramid_Animations01_19: -4537671517731788709
+      RA_Pyramid_Animations01_2: 7809419725635885610
+      RA_Pyramid_Animations01_20: -6180123795402832413
+      RA_Pyramid_Animations01_21: -2217026790732865436
+      RA_Pyramid_Animations01_22: -7172841949619383792
+      RA_Pyramid_Animations01_23: 4754707683915916847
+      RA_Pyramid_Animations01_24: 977733352068374978
+      RA_Pyramid_Animations01_25: 6631718872368577884
+      RA_Pyramid_Animations01_26: -8994415243134159752
+      RA_Pyramid_Animations01_27: -4650484735717440814
+      RA_Pyramid_Animations01_28: 2099716797547538181
+      RA_Pyramid_Animations01_29: 3797170502345171879
+      RA_Pyramid_Animations01_3: 5041180469830982584
+      RA_Pyramid_Animations01_30: -8369156370484970935
+      RA_Pyramid_Animations01_31: -5078306736172080547
+      RA_Pyramid_Animations01_32: 5566859038654999490
+      RA_Pyramid_Animations01_33: -1730786568467963307
+      RA_Pyramid_Animations01_34: -9082474430726716699
+      RA_Pyramid_Animations01_35: -3632365559682092334
+      RA_Pyramid_Animations01_36: -1211919095158002628
+      RA_Pyramid_Animations01_37: -7510331238346380788
+      RA_Pyramid_Animations01_38: -3904784355475836580
+      RA_Pyramid_Animations01_39: -4339682320536833677
+      RA_Pyramid_Animations01_4: -719483888879506519
+      RA_Pyramid_Animations01_40: 2319012321155002886
+      RA_Pyramid_Animations01_41: -3437544557932676832
+      RA_Pyramid_Animations01_42: -8916638161916854335
+      RA_Pyramid_Animations01_43: -9095749808598102454
+      RA_Pyramid_Animations01_44: 7752210167339118269
+      RA_Pyramid_Animations01_45: -5591622678862774944
+      RA_Pyramid_Animations01_46: 8637840096860338927
+      RA_Pyramid_Animations01_47: 4401647956288020926
+      RA_Pyramid_Animations01_48: 9064502423453471537
+      RA_Pyramid_Animations01_49: -3127976497120102370
+      RA_Pyramid_Animations01_5: 4700413940098837043
+      RA_Pyramid_Animations01_50: 2110149797931398245
+      RA_Pyramid_Animations01_51: -3399397206972518659
+      RA_Pyramid_Animations01_52: -8750317589120636961
+      RA_Pyramid_Animations01_53: -4162705049722364777
+      RA_Pyramid_Animations01_54: 4717206340789488917
+      RA_Pyramid_Animations01_55: -1217969801062869486
+      RA_Pyramid_Animations01_56: 8403363328064754335
+      RA_Pyramid_Animations01_57: 6936025729521217819
+      RA_Pyramid_Animations01_58: 3702044947752734289
+      RA_Pyramid_Animations01_59: 8818922224991313445
+      RA_Pyramid_Animations01_6: -595480248453136388
+      RA_Pyramid_Animations01_60: -1725377454938207525
+      RA_Pyramid_Animations01_61: 6634374270428136722
+      RA_Pyramid_Animations01_62: 6977161380540594098
+      RA_Pyramid_Animations01_63: 2043220339588452166
+      RA_Pyramid_Animations01_64: -5551720475526039033
+      RA_Pyramid_Animations01_65: -6086570312510692358
+      RA_Pyramid_Animations01_66: 4025086550871866806
+      RA_Pyramid_Animations01_67: -5136860331147360824
+      RA_Pyramid_Animations01_68: -5720100483233097972
+      RA_Pyramid_Animations01_69: 7963029675300301198
+      RA_Pyramid_Animations01_7: 5179164890013346023
+      RA_Pyramid_Animations01_70: 8382725309207913900
+      RA_Pyramid_Animations01_71: 1163588945233762847
+      RA_Pyramid_Animations01_72: 2605861298966373451
+      RA_Pyramid_Animations01_73: 7342136441058273206
+      RA_Pyramid_Animations01_74: 4371307696569140680
+      RA_Pyramid_Animations01_75: 4727397349070383111
+      RA_Pyramid_Animations01_76: -5499399162702064883
+      RA_Pyramid_Animations01_77: -2836040665049089537
+      RA_Pyramid_Animations01_78: -2674525541822689015
+      RA_Pyramid_Animations01_79: 5017434534077067298
+      RA_Pyramid_Animations01_8: -5924442769269546388
+      RA_Pyramid_Animations01_80: -7915151596268032838
+      RA_Pyramid_Animations01_81: -2729927641314337185
+      RA_Pyramid_Animations01_82: 7775001862213920229
+      RA_Pyramid_Animations01_83: 1773367077543890647
+      RA_Pyramid_Animations01_84: 6448462882722049911
+      RA_Pyramid_Animations01_85: -1635836123298525312
+      RA_Pyramid_Animations01_86: -2417581844075718485
+      RA_Pyramid_Animations01_87: 8182574202173697043
+      RA_Pyramid_Animations01_88: 8072660923156173748
+      RA_Pyramid_Animations01_89: 7776110976842354661
+      RA_Pyramid_Animations01_9: 7557451660912447722
+      RA_Pyramid_Animations01_90: -8165794113466252537
+      RA_Pyramid_Animations01_91: 892257200571003990
+      RA_Pyramid_Animations01_92: -3888959721600994277
+      RA_Pyramid_Animations01_93: -2550246475591410253
+      RA_Pyramid_Animations01_94: -5341864082904411207
+      RA_Pyramid_Animations01_95: 1209361368585423590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -196,6 +196,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -872,7 +885,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tileB_world_0: -7288866495362540915
+      tileB_world_1: 6439358867400610386
+      tileB_world_10: -7615552225065368314
+      tileB_world_11: -3428863700176401188
+      tileB_world_12: -1107369303596575812
+      tileB_world_13: 5756639624623889768
+      tileB_world_14: 5894966725749005755
+      tileB_world_15: -7993855292012036650
+      tileB_world_16: -5756385745295048105
+      tileB_world_17: -6341410525886953809
+      tileB_world_18: 5438067962660226064
+      tileB_world_19: -2815717684272888251
+      tileB_world_2: 1661795263500237086
+      tileB_world_20: -2960708305327416552
+      tileB_world_21: -3405130995077138523
+      tileB_world_22: 491324410704722438
+      tileB_world_23: -4730551112591388670
+      tileB_world_24: 178118427622345954
+      tileB_world_25: 6067814731987148722
+      tileB_world_26: 411125178936453601
+      tileB_world_27: -5472139107749403251
+      tileB_world_28: -1001864172968661556
+      tileB_world_29: 118220727772882778
+      tileB_world_3: 4142085611576151297
+      tileB_world_4: -4869191391044958968
+      tileB_world_5: 7403180050889247135
+      tileB_world_6: -3309291019725758924
+      tileB_world_7: 8434930589261452304
+      tileB_world_8: -4635083585086413877
+      tileB_world_9: -6630450935501810554
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

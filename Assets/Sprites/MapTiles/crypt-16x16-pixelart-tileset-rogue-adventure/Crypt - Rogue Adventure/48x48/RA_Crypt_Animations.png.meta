@@ -418,6 +418,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -2722,7 +2735,111 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RA_Crypt_Animations_0: -5151102089359866337
+      RA_Crypt_Animations_1: 5081300082780263477
+      RA_Crypt_Animations_10: -8486065113934099220
+      RA_Crypt_Animations_100: 8074207016516472557
+      RA_Crypt_Animations_101: -7786997020090722031
+      RA_Crypt_Animations_102: -362125388164609514
+      RA_Crypt_Animations_103: -794200597566876187
+      RA_Crypt_Animations_11: -2437533308433177659
+      RA_Crypt_Animations_12: -6440630445064396912
+      RA_Crypt_Animations_13: -4135977735079588753
+      RA_Crypt_Animations_14: -391181964787051908
+      RA_Crypt_Animations_15: 2125966529289040877
+      RA_Crypt_Animations_16: 7728288594578388056
+      RA_Crypt_Animations_17: -5676066105186269786
+      RA_Crypt_Animations_18: -5594082248648476820
+      RA_Crypt_Animations_19: -7032839518842083304
+      RA_Crypt_Animations_2: -8712415342773571354
+      RA_Crypt_Animations_20: 32344929241573358
+      RA_Crypt_Animations_21: 8842961991224623990
+      RA_Crypt_Animations_22: -785962688874221825
+      RA_Crypt_Animations_23: 5586919936136491165
+      RA_Crypt_Animations_24: -6888345984266118411
+      RA_Crypt_Animations_25: -4349236652474986012
+      RA_Crypt_Animations_26: 8631495982590663289
+      RA_Crypt_Animations_27: 8042238173618889973
+      RA_Crypt_Animations_28: -2690169393139907566
+      RA_Crypt_Animations_29: -3216885268029452046
+      RA_Crypt_Animations_3: -2660970498754445010
+      RA_Crypt_Animations_30: 3355430461037404958
+      RA_Crypt_Animations_31: -6964828714670352547
+      RA_Crypt_Animations_32: -2395866268299933492
+      RA_Crypt_Animations_33: 1134063062370044754
+      RA_Crypt_Animations_34: -2182737264858120849
+      RA_Crypt_Animations_35: -1021841245561521733
+      RA_Crypt_Animations_36: -3690411450849041984
+      RA_Crypt_Animations_37: -470629901308450940
+      RA_Crypt_Animations_38: 7048409817948750805
+      RA_Crypt_Animations_39: 4282283350049960135
+      RA_Crypt_Animations_4: 6963409842215098258
+      RA_Crypt_Animations_40: -6568566506184727330
+      RA_Crypt_Animations_41: 1246112247061237167
+      RA_Crypt_Animations_42: -5130138311484715937
+      RA_Crypt_Animations_43: -4125291632629505974
+      RA_Crypt_Animations_44: 7512789882245961907
+      RA_Crypt_Animations_45: -4449472841270475662
+      RA_Crypt_Animations_46: -4451808682135625895
+      RA_Crypt_Animations_47: 2287061616528209332
+      RA_Crypt_Animations_48: -4412460424601600691
+      RA_Crypt_Animations_49: -5909278706181272974
+      RA_Crypt_Animations_5: 7123399658691702505
+      RA_Crypt_Animations_50: 8970734471671751382
+      RA_Crypt_Animations_51: 5517301727983509605
+      RA_Crypt_Animations_52: 8850033390315557118
+      RA_Crypt_Animations_53: 4977805861912069716
+      RA_Crypt_Animations_54: -3828547984610602310
+      RA_Crypt_Animations_55: -6013011705628141775
+      RA_Crypt_Animations_56: -666415159716620045
+      RA_Crypt_Animations_57: -2306795383689943392
+      RA_Crypt_Animations_58: -4417238674228157459
+      RA_Crypt_Animations_59: 806680416594328809
+      RA_Crypt_Animations_6: 9185613339087315303
+      RA_Crypt_Animations_60: 1455615283079707499
+      RA_Crypt_Animations_61: -4439201254598152057
+      RA_Crypt_Animations_62: 9101855704041965846
+      RA_Crypt_Animations_63: 8990403090385458227
+      RA_Crypt_Animations_64: -2864151057304641765
+      RA_Crypt_Animations_65: 6177494565326933047
+      RA_Crypt_Animations_66: 8200431447644685249
+      RA_Crypt_Animations_67: -5022692171201177065
+      RA_Crypt_Animations_68: -7219134940486318073
+      RA_Crypt_Animations_69: -8067976879316499458
+      RA_Crypt_Animations_7: -2645839087909338859
+      RA_Crypt_Animations_70: 2087905766797613517
+      RA_Crypt_Animations_71: -3559330575930467157
+      RA_Crypt_Animations_72: -8473989457305350217
+      RA_Crypt_Animations_73: 744391183416816863
+      RA_Crypt_Animations_74: 1773828410572414709
+      RA_Crypt_Animations_75: 7592851023298640216
+      RA_Crypt_Animations_76: 484314659859608480
+      RA_Crypt_Animations_77: -5856731512576206967
+      RA_Crypt_Animations_78: 3910948175198634724
+      RA_Crypt_Animations_79: -6377695691406676250
+      RA_Crypt_Animations_8: -7238495237595298187
+      RA_Crypt_Animations_80: -9116609581017317882
+      RA_Crypt_Animations_81: 8057850830534068808
+      RA_Crypt_Animations_82: 829314939613109104
+      RA_Crypt_Animations_83: -1978614435300755996
+      RA_Crypt_Animations_84: 4155246285671041727
+      RA_Crypt_Animations_85: 728136629707762226
+      RA_Crypt_Animations_86: 7814138479639339607
+      RA_Crypt_Animations_87: 3775157125211160931
+      RA_Crypt_Animations_88: -971563709614043660
+      RA_Crypt_Animations_89: 7895399515636592997
+      RA_Crypt_Animations_9: 8381543221876770878
+      RA_Crypt_Animations_90: -2415523062584619172
+      RA_Crypt_Animations_91: -1730175068549873869
+      RA_Crypt_Animations_92: 7895530287222306873
+      RA_Crypt_Animations_93: -3478062129555843820
+      RA_Crypt_Animations_94: -3121081540547359344
+      RA_Crypt_Animations_95: -797171112993666799
+      RA_Crypt_Animations_96: -4935934340320361316
+      RA_Crypt_Animations_97: 4430585542691290107
+      RA_Crypt_Animations_98: -8407698512069509262
+      RA_Crypt_Animations_99: 1574161937544022626
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

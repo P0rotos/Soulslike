@@ -127,6 +127,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -297,7 +310,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '!RA_Pyramid_Doors01_0': -4170345128730144453
+      '!RA_Pyramid_Doors01_1': 1436438353079382538
+      '!RA_Pyramid_Doors01_2': -765883067201227559
+      '!RA_Pyramid_Doors01_3': 3076018972997035687
+      '!RA_Pyramid_Doors01_4': -1720941119407194691
+      '!RA_Pyramid_Doors01_5': 5129613350370521306
+      '!RA_Pyramid_Doors01_6': -5793909077769818234
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

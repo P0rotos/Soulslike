@@ -220,6 +220,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1072,7 +1085,45 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RA_Ground_Tiles_B_0: 4956122219585992871
+      RA_Ground_Tiles_B_1: 1877612784323534474
+      RA_Ground_Tiles_B_10: -5313211329122249459
+      RA_Ground_Tiles_B_11: -3155527647517131452
+      RA_Ground_Tiles_B_12: 7049689335443175759
+      RA_Ground_Tiles_B_13: -8882553279239893442
+      RA_Ground_Tiles_B_14: -956938084398116650
+      RA_Ground_Tiles_B_15: -2148127082100990726
+      RA_Ground_Tiles_B_16: -5046512503654130445
+      RA_Ground_Tiles_B_17: 523407762912294546
+      RA_Ground_Tiles_B_18: -6718932701933985333
+      RA_Ground_Tiles_B_19: -3056940039427705702
+      RA_Ground_Tiles_B_2: 5268319278502192652
+      RA_Ground_Tiles_B_20: -4301901274420904931
+      RA_Ground_Tiles_B_21: -256300358026452916
+      RA_Ground_Tiles_B_22: 3340900256442549526
+      RA_Ground_Tiles_B_23: 8012270325133433312
+      RA_Ground_Tiles_B_24: 6475375965123473878
+      RA_Ground_Tiles_B_25: -1857649603773395679
+      RA_Ground_Tiles_B_26: -316244934753006398
+      RA_Ground_Tiles_B_27: -6721936275527005810
+      RA_Ground_Tiles_B_28: -8910774362769612484
+      RA_Ground_Tiles_B_29: -539045912545793449
+      RA_Ground_Tiles_B_3: 1873940885939464169
+      RA_Ground_Tiles_B_30: -1979499029384182293
+      RA_Ground_Tiles_B_31: 5863774762174348197
+      RA_Ground_Tiles_B_32: 7245004480391967918
+      RA_Ground_Tiles_B_33: 3690795982858635
+      RA_Ground_Tiles_B_34: -5596946861098838689
+      RA_Ground_Tiles_B_35: 785171520590089302
+      RA_Ground_Tiles_B_36: 5073600677466653093
+      RA_Ground_Tiles_B_37: 4856181370598130453
+      RA_Ground_Tiles_B_4: 4152904004509217186
+      RA_Ground_Tiles_B_5: -1655248252177329238
+      RA_Ground_Tiles_B_6: -1963710628671750957
+      RA_Ground_Tiles_B_7: 1086593926175668429
+      RA_Ground_Tiles_B_8: -5655199791496211484
+      RA_Ground_Tiles_B_9: 5073702396318082709
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

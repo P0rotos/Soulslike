@@ -292,6 +292,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1672,7 +1685,69 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RA_Graveyard_D_0: -6634490775625080803
+      RA_Graveyard_D_1: 110485225729071007
+      RA_Graveyard_D_10: -8166708926345202126
+      RA_Graveyard_D_11: -7059487177793827035
+      RA_Graveyard_D_12: -6020022237994084000
+      RA_Graveyard_D_13: -2378040775027909698
+      RA_Graveyard_D_14: 1148690084374859361
+      RA_Graveyard_D_15: -5788588292843607366
+      RA_Graveyard_D_16: -2037947226561204043
+      RA_Graveyard_D_17: 5915360852885228724
+      RA_Graveyard_D_18: 6637140406202649075
+      RA_Graveyard_D_19: -1510182268239032205
+      RA_Graveyard_D_2: 4151609688789470201
+      RA_Graveyard_D_20: 9048531736635337066
+      RA_Graveyard_D_21: 7544416662414179655
+      RA_Graveyard_D_22: -7144331283220831569
+      RA_Graveyard_D_23: -1579642220462650481
+      RA_Graveyard_D_24: 7524064293388403028
+      RA_Graveyard_D_25: -4150927340685526446
+      RA_Graveyard_D_26: -6204264464374360164
+      RA_Graveyard_D_27: 2882530767387627459
+      RA_Graveyard_D_28: -8994923127438589445
+      RA_Graveyard_D_29: 1972489805079520373
+      RA_Graveyard_D_3: 5281553078987683492
+      RA_Graveyard_D_30: -6266175314335805245
+      RA_Graveyard_D_31: 4271260686208801573
+      RA_Graveyard_D_32: -6307519537905109110
+      RA_Graveyard_D_33: -1623586596557691887
+      RA_Graveyard_D_34: -5728774960163146250
+      RA_Graveyard_D_35: -2547964142590397929
+      RA_Graveyard_D_36: 3241424982792985675
+      RA_Graveyard_D_37: -1475391940317105305
+      RA_Graveyard_D_38: -3618991713747700081
+      RA_Graveyard_D_39: 2420277590848719795
+      RA_Graveyard_D_4: -1088874636294506581
+      RA_Graveyard_D_40: 7074800123070586075
+      RA_Graveyard_D_41: -8696690313506330100
+      RA_Graveyard_D_42: 6863022158709722702
+      RA_Graveyard_D_43: 2356717030931259715
+      RA_Graveyard_D_44: -916649548034390784
+      RA_Graveyard_D_45: 6098476257040783868
+      RA_Graveyard_D_46: -6904003076012252724
+      RA_Graveyard_D_47: 683219588048219950
+      RA_Graveyard_D_48: 8745085222425544610
+      RA_Graveyard_D_49: -4019471040993952185
+      RA_Graveyard_D_5: -997880912434647686
+      RA_Graveyard_D_50: 2135823032127823372
+      RA_Graveyard_D_51: -845913410747639410
+      RA_Graveyard_D_52: 6483429092895971425
+      RA_Graveyard_D_53: -6264593869507267447
+      RA_Graveyard_D_54: -8705017778574131863
+      RA_Graveyard_D_55: 1079145507617102699
+      RA_Graveyard_D_56: -8154267331855202628
+      RA_Graveyard_D_57: -125360731088148812
+      RA_Graveyard_D_58: -1827535168156956460
+      RA_Graveyard_D_59: -1537863736886944362
+      RA_Graveyard_D_6: -4883592791556167879
+      RA_Graveyard_D_60: 2703289762663193602
+      RA_Graveyard_D_61: -6421883171801503788
+      RA_Graveyard_D_7: 549610005918759301
+      RA_Graveyard_D_8: 2347152708124996374
+      RA_Graveyard_D_9: 3815431841340949500
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

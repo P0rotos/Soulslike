@@ -310,6 +310,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1822,7 +1835,75 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      puzzle_0: -8506735889323900786
+      puzzle_1: 5888589322348927482
+      puzzle_10: -9115396585928510311
+      puzzle_11: -9005602716035665715
+      puzzle_12: -1718244285865808769
+      puzzle_13: 2487019900452698373
+      puzzle_14: 8018089613639400461
+      puzzle_15: 1153079593343593376
+      puzzle_16: 8286234726563229829
+      puzzle_17: -3997472020901672001
+      puzzle_18: -8865372154072734084
+      puzzle_19: 4508497439203921822
+      puzzle_2: -8246695295650224552
+      puzzle_20: 2446055610473517886
+      puzzle_21: -6410399978089161285
+      puzzle_22: -2814447308178094671
+      puzzle_23: 2099682725523127306
+      puzzle_24: 3697819193045525456
+      puzzle_25: 6231112791748847497
+      puzzle_26: 672704487469185829
+      puzzle_27: -3945760486813254843
+      puzzle_28: -7892141370459897791
+      puzzle_29: 7686562910896970430
+      puzzle_3: 8410894248705696185
+      puzzle_30: -545924760235172162
+      puzzle_31: -3258048348879147285
+      puzzle_32: 583378749299993879
+      puzzle_33: 1304430921039585786
+      puzzle_34: -1054134462032260882
+      puzzle_35: 4839678169968140549
+      puzzle_36: -4747428755886061673
+      puzzle_37: -2016516657959054939
+      puzzle_38: 874229740858186777
+      puzzle_39: -711971301124932385
+      puzzle_4: 8500952370780790516
+      puzzle_40: -5770966389564990234
+      puzzle_41: -8205232269845574133
+      puzzle_42: -7034311695744368736
+      puzzle_43: -6733426949105482660
+      puzzle_44: -8175730717667249709
+      puzzle_45: 5356218375714721651
+      puzzle_46: 1062108050071428940
+      puzzle_47: 7825689527693534025
+      puzzle_48: -8763765225183467739
+      puzzle_49: 8353804222980780492
+      puzzle_5: -6226498286090505678
+      puzzle_50: 2331099730971995078
+      puzzle_51: -3738416124317639522
+      puzzle_52: -3793434039973334560
+      puzzle_53: -4986914671092411867
+      puzzle_54: -4807846223771319264
+      puzzle_55: 501703932177858550
+      puzzle_56: 4838217442163895912
+      puzzle_57: 2258248270011272090
+      puzzle_58: -2964085076133885408
+      puzzle_59: 6318592426565493865
+      puzzle_6: 312967351301300155
+      puzzle_60: 7846965059597229265
+      puzzle_61: -8914443492072390253
+      puzzle_62: 8316740697524175169
+      puzzle_63: -7687833549752829562
+      puzzle_64: -2731673656398499450
+      puzzle_65: -1324571867469781948
+      puzzle_66: -4806731361455084252
+      puzzle_67: 4715593662291993500
+      puzzle_7: -1316342616119400027
+      puzzle_8: 255496866392592140
+      puzzle_9: -1473846967724845052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -298,6 +298,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1722,7 +1735,71 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RA_Crypt_Animations_002_0: -2388426224238041612
+      RA_Crypt_Animations_002_1: -1045790796713873999
+      RA_Crypt_Animations_002_10: -3393561709351389301
+      RA_Crypt_Animations_002_11: -7740653469599694477
+      RA_Crypt_Animations_002_12: -427156440429060808
+      RA_Crypt_Animations_002_13: 5328735628467298124
+      RA_Crypt_Animations_002_14: -7755790342954250323
+      RA_Crypt_Animations_002_15: 5724520828552808563
+      RA_Crypt_Animations_002_16: 5209121784955383801
+      RA_Crypt_Animations_002_17: -2028940488348251927
+      RA_Crypt_Animations_002_18: 3463258591099349489
+      RA_Crypt_Animations_002_19: -3165406936956784485
+      RA_Crypt_Animations_002_2: 385833042823590497
+      RA_Crypt_Animations_002_20: -4908092857503208339
+      RA_Crypt_Animations_002_21: 3082199137169523897
+      RA_Crypt_Animations_002_22: -1086912214344199215
+      RA_Crypt_Animations_002_23: 8325588602866238183
+      RA_Crypt_Animations_002_24: 295836799019675688
+      RA_Crypt_Animations_002_25: 5795768463157854962
+      RA_Crypt_Animations_002_26: 7320981247771563433
+      RA_Crypt_Animations_002_27: -3596010086691848319
+      RA_Crypt_Animations_002_28: -3993033749252954797
+      RA_Crypt_Animations_002_29: -2077029068781664730
+      RA_Crypt_Animations_002_3: -9198090503964712448
+      RA_Crypt_Animations_002_30: 8020945972930536921
+      RA_Crypt_Animations_002_31: -2285606153215465693
+      RA_Crypt_Animations_002_32: -2117749731092782656
+      RA_Crypt_Animations_002_33: 1398498696731202810
+      RA_Crypt_Animations_002_34: -7795529241611278119
+      RA_Crypt_Animations_002_35: -4375470521237945340
+      RA_Crypt_Animations_002_36: -222357288292179573
+      RA_Crypt_Animations_002_37: -7815854305661965088
+      RA_Crypt_Animations_002_38: -5711731341892494654
+      RA_Crypt_Animations_002_39: -2373439773836944045
+      RA_Crypt_Animations_002_4: -1021820951675830603
+      RA_Crypt_Animations_002_40: -867024236651220816
+      RA_Crypt_Animations_002_41: -5751541724077372895
+      RA_Crypt_Animations_002_42: -2431514698525699757
+      RA_Crypt_Animations_002_43: -7888302403934334857
+      RA_Crypt_Animations_002_44: 3301709477535066765
+      RA_Crypt_Animations_002_45: 3955376832994425546
+      RA_Crypt_Animations_002_46: -2332121131446665536
+      RA_Crypt_Animations_002_47: -9039763669689767110
+      RA_Crypt_Animations_002_48: 4983636422639436065
+      RA_Crypt_Animations_002_49: -6086824303668093575
+      RA_Crypt_Animations_002_5: -6583845617859136188
+      RA_Crypt_Animations_002_50: 8787110064845244789
+      RA_Crypt_Animations_002_51: -8201651324505806422
+      RA_Crypt_Animations_002_52: -3863128654152438799
+      RA_Crypt_Animations_002_53: -4024395166110304473
+      RA_Crypt_Animations_002_54: 3016581893720730820
+      RA_Crypt_Animations_002_55: -3098787151756330138
+      RA_Crypt_Animations_002_56: 9168814984553923800
+      RA_Crypt_Animations_002_57: -4108731629171690153
+      RA_Crypt_Animations_002_58: 841234550885533845
+      RA_Crypt_Animations_002_59: 6199625666213734700
+      RA_Crypt_Animations_002_6: -4584215824374472628
+      RA_Crypt_Animations_002_60: -6158061750720223228
+      RA_Crypt_Animations_002_61: -8121909477443114060
+      RA_Crypt_Animations_002_62: -8204828026020975110
+      RA_Crypt_Animations_002_63: -8735303407187600134
+      RA_Crypt_Animations_002_7: -3253683539031441186
+      RA_Crypt_Animations_002_8: 4230472022381523457
+      RA_Crypt_Animations_002_9: -6230704723732171705
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

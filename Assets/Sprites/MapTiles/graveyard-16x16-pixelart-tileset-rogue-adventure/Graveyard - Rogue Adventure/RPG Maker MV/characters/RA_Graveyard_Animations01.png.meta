@@ -322,6 +322,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1922,7 +1935,79 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RA_Graveyard_Animations01_0: 6482718919935482680
+      RA_Graveyard_Animations01_1: -5090448570212483903
+      RA_Graveyard_Animations01_10: -8857753223279113152
+      RA_Graveyard_Animations01_11: -7490063429669855826
+      RA_Graveyard_Animations01_12: 2528975186482035875
+      RA_Graveyard_Animations01_13: 6003881904677967389
+      RA_Graveyard_Animations01_14: 6092278107476321971
+      RA_Graveyard_Animations01_15: 7544466496542369346
+      RA_Graveyard_Animations01_16: -6073509762515325765
+      RA_Graveyard_Animations01_17: -7950012758324593338
+      RA_Graveyard_Animations01_18: -1250163971368869015
+      RA_Graveyard_Animations01_19: -8321337878052493961
+      RA_Graveyard_Animations01_2: -3021320066853966074
+      RA_Graveyard_Animations01_20: 3922886301843298161
+      RA_Graveyard_Animations01_21: 1667088611923398499
+      RA_Graveyard_Animations01_22: 9003092832903535804
+      RA_Graveyard_Animations01_23: 703674820793064563
+      RA_Graveyard_Animations01_24: 4551704085432428739
+      RA_Graveyard_Animations01_25: 3104476679353151418
+      RA_Graveyard_Animations01_26: -1464127350497693402
+      RA_Graveyard_Animations01_27: 4938300568103778048
+      RA_Graveyard_Animations01_28: 5528205314042816014
+      RA_Graveyard_Animations01_29: 370085018824209552
+      RA_Graveyard_Animations01_3: 8619865654993263947
+      RA_Graveyard_Animations01_30: -4039513836849131702
+      RA_Graveyard_Animations01_31: 6872595001042918360
+      RA_Graveyard_Animations01_32: -593416251321293138
+      RA_Graveyard_Animations01_33: -3446076502387794868
+      RA_Graveyard_Animations01_34: -6305202606738077533
+      RA_Graveyard_Animations01_35: -3991783153934118121
+      RA_Graveyard_Animations01_36: 794595778709924972
+      RA_Graveyard_Animations01_37: 5646004774329658292
+      RA_Graveyard_Animations01_38: -351221531192649751
+      RA_Graveyard_Animations01_39: 3167295504273931157
+      RA_Graveyard_Animations01_4: 4308657415367781378
+      RA_Graveyard_Animations01_40: -3746408462510107035
+      RA_Graveyard_Animations01_41: -2891818869110484862
+      RA_Graveyard_Animations01_42: -6945298919509226445
+      RA_Graveyard_Animations01_43: -7724007561591737419
+      RA_Graveyard_Animations01_44: 2654313610926396126
+      RA_Graveyard_Animations01_45: -1874113514735368498
+      RA_Graveyard_Animations01_46: 8773861504054999670
+      RA_Graveyard_Animations01_47: 505963298665361465
+      RA_Graveyard_Animations01_48: 3400334915081262512
+      RA_Graveyard_Animations01_49: -640395138565853751
+      RA_Graveyard_Animations01_5: 7679729061849943885
+      RA_Graveyard_Animations01_50: -7510831537517840337
+      RA_Graveyard_Animations01_51: -7292986795142895273
+      RA_Graveyard_Animations01_52: -2370010687930929140
+      RA_Graveyard_Animations01_53: 4547746831683215078
+      RA_Graveyard_Animations01_54: -7755080981709865203
+      RA_Graveyard_Animations01_55: -1522730581590776452
+      RA_Graveyard_Animations01_56: -1319578090112669664
+      RA_Graveyard_Animations01_57: -3040958786661277895
+      RA_Graveyard_Animations01_58: -1128733683313012854
+      RA_Graveyard_Animations01_59: 7367900790767445455
+      RA_Graveyard_Animations01_6: 1605931739423624638
+      RA_Graveyard_Animations01_60: 6242775786270141659
+      RA_Graveyard_Animations01_61: -5012956316781530397
+      RA_Graveyard_Animations01_62: 8871739539292179534
+      RA_Graveyard_Animations01_63: -929758492464492734
+      RA_Graveyard_Animations01_64: 1429887031449888182
+      RA_Graveyard_Animations01_65: 3277136351653473994
+      RA_Graveyard_Animations01_66: -630687797406057374
+      RA_Graveyard_Animations01_67: -3166757774839423050
+      RA_Graveyard_Animations01_68: -876342282198544963
+      RA_Graveyard_Animations01_69: -8001428785323712527
+      RA_Graveyard_Animations01_7: -6267992564681939735
+      RA_Graveyard_Animations01_70: 7744719820845736634
+      RA_Graveyard_Animations01_71: 2659409683304345481
+      RA_Graveyard_Animations01_8: -3618956250033667756
+      RA_Graveyard_Animations01_9: 3867816649302881992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

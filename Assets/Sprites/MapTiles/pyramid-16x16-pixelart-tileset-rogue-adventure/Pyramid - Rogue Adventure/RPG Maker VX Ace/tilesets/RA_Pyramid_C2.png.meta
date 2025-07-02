@@ -268,6 +268,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1472,7 +1485,61 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RA_Pyramid_C2_0: -6639610620983171223
+      RA_Pyramid_C2_1: 9124151584413966711
+      RA_Pyramid_C2_10: -447323075775023804
+      RA_Pyramid_C2_11: 7817774369511320284
+      RA_Pyramid_C2_12: 8207986702914892691
+      RA_Pyramid_C2_13: 7552669294503815670
+      RA_Pyramid_C2_14: -2276275605846822020
+      RA_Pyramid_C2_15: 7598174154833929192
+      RA_Pyramid_C2_16: -6384900819884642644
+      RA_Pyramid_C2_17: 7660493678514794557
+      RA_Pyramid_C2_18: 5352516950902524057
+      RA_Pyramid_C2_19: -341461839630657044
+      RA_Pyramid_C2_2: 68158319005171574
+      RA_Pyramid_C2_20: -7189003283444031951
+      RA_Pyramid_C2_21: 687592521328245298
+      RA_Pyramid_C2_22: 8107372849774301821
+      RA_Pyramid_C2_23: 7563533935503935533
+      RA_Pyramid_C2_24: -4134259685242953087
+      RA_Pyramid_C2_25: 1076843458041739292
+      RA_Pyramid_C2_26: -7393461715920600749
+      RA_Pyramid_C2_27: -8842574560333308278
+      RA_Pyramid_C2_28: -1643175472800914228
+      RA_Pyramid_C2_29: 7511399213600687729
+      RA_Pyramid_C2_3: -8749476407679854767
+      RA_Pyramid_C2_30: 6054797970370441164
+      RA_Pyramid_C2_31: -4340687412503580816
+      RA_Pyramid_C2_32: -4369857044537399375
+      RA_Pyramid_C2_33: 1084100247998665126
+      RA_Pyramid_C2_34: -4972981071267794114
+      RA_Pyramid_C2_35: 5072338529990504260
+      RA_Pyramid_C2_36: 8154404521595535581
+      RA_Pyramid_C2_37: 1519370340890932292
+      RA_Pyramid_C2_38: 7539127555173310635
+      RA_Pyramid_C2_39: 7762424355145765805
+      RA_Pyramid_C2_4: 8110648420526858391
+      RA_Pyramid_C2_40: 9161093971046289038
+      RA_Pyramid_C2_41: -1733688559123969228
+      RA_Pyramid_C2_42: -8288257369778736789
+      RA_Pyramid_C2_43: -2602448653851704757
+      RA_Pyramid_C2_44: -2302468397989679870
+      RA_Pyramid_C2_45: 3881656573360016900
+      RA_Pyramid_C2_46: -6639392854672194854
+      RA_Pyramid_C2_47: 3366729920560374523
+      RA_Pyramid_C2_48: 2345883725974385831
+      RA_Pyramid_C2_49: 8513681172727145746
+      RA_Pyramid_C2_5: -8200226768882074428
+      RA_Pyramid_C2_50: -8651016203615361953
+      RA_Pyramid_C2_51: -7523406035625424372
+      RA_Pyramid_C2_52: 1609978886767315585
+      RA_Pyramid_C2_53: 2908611066133184197
+      RA_Pyramid_C2_6: 4945768625392722001
+      RA_Pyramid_C2_7: 7360437802061081502
+      RA_Pyramid_C2_8: 1937197238755590829
+      RA_Pyramid_C2_9: -957240478423156378
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

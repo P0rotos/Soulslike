@@ -58,7 +58,7 @@ public class EnemiesCommons : MonoBehaviour, IStats
         if (attack != null)
             stats.vit -= attack.dmg;
         Debug.Log($"{gameObject.name} took {attack.dmg} damage! Remaining HP: {stats.vit}");
-
+        other.enable = false;
         // Calculate pushback direction (from enemy to player)    
         Vector2 pushDirection = (transform.position - other.transform.position).normalized;
         StartCoroutine(PushbackCoroutine(pushDirection, pushForce, pushTime));

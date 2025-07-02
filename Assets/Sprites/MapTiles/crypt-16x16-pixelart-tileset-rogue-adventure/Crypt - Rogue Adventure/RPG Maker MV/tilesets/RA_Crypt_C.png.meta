@@ -226,6 +226,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1122,7 +1135,47 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RA_Crypt_C_0: -7857905113057210869
+      RA_Crypt_C_1: 8809061905229808863
+      RA_Crypt_C_10: -8080373169507768525
+      RA_Crypt_C_11: -7484307902576790326
+      RA_Crypt_C_12: 6418237591556316540
+      RA_Crypt_C_13: 2526710643629611725
+      RA_Crypt_C_14: 5157884319397071954
+      RA_Crypt_C_15: 6157902720069581398
+      RA_Crypt_C_16: 1958529981824025254
+      RA_Crypt_C_17: -7271308002166403995
+      RA_Crypt_C_18: 1282846063146417555
+      RA_Crypt_C_19: 4540844881982551976
+      RA_Crypt_C_2: 2303964739969432495
+      RA_Crypt_C_20: -3348261678865716800
+      RA_Crypt_C_21: -8992487352608422456
+      RA_Crypt_C_22: 3514622368409121833
+      RA_Crypt_C_23: 4265966943604777997
+      RA_Crypt_C_24: -4189610725858247530
+      RA_Crypt_C_25: 4932370062315073588
+      RA_Crypt_C_26: 8096500461052272487
+      RA_Crypt_C_27: 5468301163823783830
+      RA_Crypt_C_28: 8495772747735481389
+      RA_Crypt_C_29: 1423349362672485698
+      RA_Crypt_C_3: -8920150514951038434
+      RA_Crypt_C_30: 506293381966522791
+      RA_Crypt_C_31: 5958495621799106012
+      RA_Crypt_C_32: 5734816193017339259
+      RA_Crypt_C_33: -8637073522744499824
+      RA_Crypt_C_34: -7771215763003146311
+      RA_Crypt_C_35: 5832936816507909972
+      RA_Crypt_C_36: -9204839612280146550
+      RA_Crypt_C_37: 2040541642417854777
+      RA_Crypt_C_38: 1165724812249029286
+      RA_Crypt_C_39: 1849237725850185036
+      RA_Crypt_C_4: -599746126777701447
+      RA_Crypt_C_5: 1691142252338224206
+      RA_Crypt_C_6: 9174681586942137775
+      RA_Crypt_C_7: 8189036265242722606
+      RA_Crypt_C_8: 2364394053801413828
+      RA_Crypt_C_9: 6461421548563777077
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

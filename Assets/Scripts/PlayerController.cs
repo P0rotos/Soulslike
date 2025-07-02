@@ -176,8 +176,9 @@ public class PlayerController : MonoBehaviour, IStats
                 attack.transform.localScale = new Vector3(scale.x, -Mathf.Abs(scale.y), scale.z);
             }
 
-            var follow = attack.GetComponent<SwordAttackController>();
+            var follow = attack.GetComponent<IDamage>();
             if (follow != null){
+                //switchcase de ataques y cambiar stats de player acorde al ataque (quizas cambiar stats arriba en el ctrlizquierdo)
                 follow.player = this;
                 follow.offset = offset;
                 follow.dmg = stats.str;
