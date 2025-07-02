@@ -3,20 +3,20 @@ using UnityEngine;
 public class SwordAttackController : MonoBehaviour, IDamage{
     /*public float rotspeed = 180f;
     public float maxAngle = -180f;*/
-    public PlayerController player;
+    public PlayerController _player;
     [SerializeField] private float _dmg = 1f;
     [SerializeField] private Vector3 _offset = Vector3.forward;
+    [SerializeField] private bool _type = false; //false == physical, true == magical
 
-    public float dmg => _dmg;
-    public Vector3 offset => _offset;
-
-    public float time = 0.2f;
+    public float dmg { get => _dmg; set => _dmg = value; }
+    public Vector3 offset { get => _offset; set => _offset = value; }
+    public bool type { get => _type; set => _type = value; }
+    public PlayerController player { get => _player; set => _player = value; }
     
     void Start(){
         Debug.Log("SwordAttackController created at: " + Time.time);
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        player = playerObj.GetComponent<PlayerController>();
-        Destroy(GameObject, time);
+        _player = playerObj.GetComponent<PlayerController>();
     }
     
     void Update(){

@@ -15,7 +15,10 @@ public class PlayerController : MonoBehaviour, IStats
     [Header("Stats")]
     [SerializeField] protected float detectionRadius = 5f;
     [SerializeField] public Stats stats = new Stats();
-    Stats IStats.stats => stats;
+    Stats IStats.stats{
+        get => stats;
+        set => stats = value;
+    }
 
     [Header("Prefabs")]
     public GameObject prefabAttack;
@@ -28,7 +31,7 @@ public class PlayerController : MonoBehaviour, IStats
     [SerializeField] private float rollDuration = 0.3f;
 
     private float speed;
-    private char attackType = 0;
+    private char attackType = (char)0; //0 == strenght meele, 1 == magical distance, 2 ==  dex meele, 3 == dex distance
     public float health;
     public Joystick joystick;
     GameObject attack;
@@ -76,17 +79,17 @@ public class PlayerController : MonoBehaviour, IStats
             Roll();
         }
         if (Input.GetKeyDown(KeyCode.LeftControl)){
-            attackType = (attackType+1)%4;
-            if(attackType == 0){
+            attackType = (char)((attackType+1)%4);
+            if(attackType == (char)0){
                 prefabAttack = Resources.Load<GameObject>("SwordAttack");
             }
-            if(attackType == 1){
+            if(attackType == (char)1){
                 prefabAttack = Resources.Load<GameObject>("MagicAttack");
             }
-            if(attackType == 2){
+            if(attackType == (char)2){
                 prefabAttack = Resources.Load<GameObject>("DaggerAttack");
             }
-            if(attackType == 3){
+            if(attackType == (char)3){
                 prefabAttack = Resources.Load<GameObject>("BowAttack");
             }
         }
@@ -126,9 +129,9 @@ public class PlayerController : MonoBehaviour, IStats
         if (collision.gameObject.CompareTag("Enemy")) {
             collisionDamageTimer += Time.fixedDeltaTime;
             if (collisionDamageTimer >= 0.5f) {
-                var attack = collision.gameObject.GetComponent<IDamage>();
+                var attack = collision.gameObject.GetComponent<IStats>();
                 if (attack != null) {
-                    health -= attack.str;
+                    health -= attack.stats.str;
                     Debug.Log($"{gameObject.name} is taking periodic damage! Remaining HP: {health}");
                 }
                 collisionDamageTimer = 0f; // Reset timer after applying damage

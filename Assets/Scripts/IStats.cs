@@ -13,5 +13,5 @@ public class Stats
 
 public interface IStats
 {
-    Stats stats { get; }
+    Stats stats { get; set; }
 }

@@ -6,7 +6,10 @@ public class EnemiesCommons : MonoBehaviour, IStats
     [Header("Stats")]
     [SerializeField] protected float detectionRadius = 5f;
     [SerializeField] public Stats stats = new Stats();
-    Stats IStats.stats => stats;
+    Stats IStats.stats{
+        get => stats;
+        set => stats = value;
+    }
 
     protected Rigidbody2D rb;
     protected Animator anim;
@@ -58,7 +61,7 @@ public class EnemiesCommons : MonoBehaviour, IStats
         if (attack != null)
             stats.vit -= attack.dmg;
         Debug.Log($"{gameObject.name} took {attack.dmg} damage! Remaining HP: {stats.vit}");
-        other.enable = false;
+        other.enabled = false;
         // Calculate pushback direction (from enemy to player)    
         Vector2 pushDirection = (transform.position - other.transform.position).normalized;
         StartCoroutine(PushbackCoroutine(pushDirection, pushForce, pushTime));
