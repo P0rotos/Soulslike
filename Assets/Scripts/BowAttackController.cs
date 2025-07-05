@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MagicAttackController : MonoBehaviour, IDamage{
+public class BowAttackController : MonoBehaviour, IDamage{
     /*public float rotspeed = 180f;
     public float maxAngle = -180f;*/
     private Vector3 startPosition;
@@ -8,7 +8,7 @@ public class MagicAttackController : MonoBehaviour, IDamage{
     [SerializeField] private float maxDistance = 10f;
     [SerializeField] private float _dmg = 1f;
     [SerializeField] private Vector3 _offset = Vector3.forward;
-    [SerializeField] private bool _type = true; //false == physical, true == magical
+    [SerializeField] private bool _type = false; //false == physical, true == magical
     [SerializeField] private float speed = 5f;
 
     public Vector3 direction = Vector3.right; 

@@ -82,15 +82,19 @@ public class PlayerController : MonoBehaviour, IStats
             attackType = (char)((attackType+1)%4);
             if(attackType == (char)0){
                 prefabAttack = Resources.Load<GameObject>("SwordAttack");
+                anim.SetFloat("Type", 0.0f);
             }
             if(attackType == (char)1){
                 prefabAttack = Resources.Load<GameObject>("MagicAttack");
+                anim.SetFloat("Type", 0.0f);
             }
             if(attackType == (char)2){
                 prefabAttack = Resources.Load<GameObject>("DaggerAttack");
+                anim.SetFloat("Type", 0.0f);
             }
             if(attackType == (char)3){
                 prefabAttack = Resources.Load<GameObject>("BowAttack");
+                anim.SetFloat("Type", 0.0f);
             }
         }
     }
@@ -155,7 +159,7 @@ public class PlayerController : MonoBehaviour, IStats
 
     public void Attack(){
         if(!attackFlag){
-            anim.SetBool("Attack", true);
+            anim.SetInteger("AttackBT", 1);
             attackFlag=true;
             Debug.Log("PlayerController: Attack");
             // Snap lastMoveDirection to the nearest cardinal direction
