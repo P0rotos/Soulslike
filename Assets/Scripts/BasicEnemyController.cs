@@ -30,6 +30,7 @@ public class BasicEnemyController : EnemiesCommons
             Animate(distance, "Run", "X", "Y");
         }
         if (stats.vit <= 0){
+            XPDrop();
             Destroy(gameObject);
             return;
         }

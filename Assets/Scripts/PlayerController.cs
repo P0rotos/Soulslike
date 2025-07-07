@@ -25,19 +25,20 @@ public class PlayerController : MonoBehaviour, IStats
 
     [Header("Others")]
     [SerializeField] private float attackOffset = 0.5f;
-    [SerializeField] private float dashspeed = 15.0f;
-    [SerializeField] private float rollspeed = 8.0f;
+    [SerializeField] public float dashspeed = 15.0f;
+    [SerializeField] public float rollspeed = 8.0f;
     [SerializeField] private float dashDuration = 0.3f; // Duration in seconds
     [SerializeField] private float rollDuration = 0.3f;
 
-    private float speed;
-    [SerializeField] private char attackType = (char)0; //0 == strenght meele, 3 == magical distance, 1 ==  dex meele, 2 == dex distance
+    public float speed;
+    [SerializeField] public char attackType = (char)0; //0 == strenght meele, 3 == magical distance, 1 ==  dex meele, 2 == dex distance
     public float health;
     public Joystick joystick;
     GameObject attack;
     private bool attackFlag = false;
     private bool isPushedBack = false;
     private float collisionDamageTimer = 0f;
+    [SerializeField] public int XP;
     
     void OnValidate(){
         speed = stats.mov / 4f; // Or whatever logic you want
@@ -259,9 +260,12 @@ public class PlayerController : MonoBehaviour, IStats
         isPushedBack = false;
     }
 
-    public void SetMov(float m){
+    public void SetMov(float m)
+    {
         stats.mov = m;
         speed = stats.mov / 4f;
+        dashspeed = stats.mov * 1.875f; // 15.0f when mov is 8.0f
+        rollspeed = stats.mov * 1.0f; // 8.0f
     }
 
     public void SetHealth(float h){
@@ -269,7 +273,7 @@ public class PlayerController : MonoBehaviour, IStats
         health = stats.vit;
     }
 
-    void UpdateHealthUI(){
+    public void UpdateHealthUI(){
         // Update the fill amount of the health bar
         if (healthBarFill != null){
             float minFill = 0.12f;

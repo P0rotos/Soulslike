@@ -200,6 +200,7 @@ MonoBehaviour:
     mdef: 1
     vit: 20
     res: 10
+  xp: 100
   attackTimer: 5
 --- !u!195 &-1238863018196798970
 NavMeshAgent:

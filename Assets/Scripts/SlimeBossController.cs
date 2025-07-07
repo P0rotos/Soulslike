@@ -37,6 +37,7 @@ public class SlimeBossController : EnemiesCommons
             Animate(distance, "Move", null, null);
         }
         if (stats.vit <= 0){
+            XPDrop();
             anim.SetBool("Died", true);
             return;
         }

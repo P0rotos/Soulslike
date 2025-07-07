@@ -209,6 +209,7 @@ MonoBehaviour:
     mdef: 1
     vit: 5
     res: 10
+  xp: 5
 --- !u!195 &3335133629747019079
 NavMeshAgent:
   m_ObjectHideFlags: 0
