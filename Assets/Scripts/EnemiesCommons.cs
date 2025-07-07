@@ -57,9 +57,14 @@ public class EnemiesCommons : MonoBehaviour, IStats
 
     protected void ReceiveAttack(Collider2D other, float pushForce, float pushTime){
         // Get the damage from the attack object
-        var attack = other.GetComponent<SwordAttackController>();
-        if (attack != null)
-            stats.vit -= attack.dmg;
+        var attack = other.GetComponent<IDamage>();
+        if (attack != null){
+            if (attack.type == false){ // Physical attack
+                stats.vit -= attack.dmg * (1.0f/stats.def);
+            } else { // Magical attack
+                stats.vit -= attack.dmg * (1.0f/stats.mdef); 
+            }
+        }
         Debug.Log($"{gameObject.name} took {attack.dmg} damage! Remaining HP: {stats.vit}");
         other.enabled = false;
         // Calculate pushback direction (from enemy to player)    

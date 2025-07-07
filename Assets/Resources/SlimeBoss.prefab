@@ -190,13 +190,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c1916bf64424e41bb40d63ef8295ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vit: 20
-  _str: 3
-  mind: 0
-  def: 0
-  mdef: 0
-  mov: 8
   detectionRadius: 8
+  stats:
+    mov: 8
+    str: 1
+    dex: 1
+    mind: 1
+    def: 999
+    mdef: 1
+    vit: 20
+    res: 10
   attackTimer: 5
 --- !u!195 &-1238863018196798970
 NavMeshAgent:

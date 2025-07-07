@@ -104,13 +104,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7384d15fb779e45ae7085394a7fd14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vit: 12
-  _str: 2
-  mind: 0
-  def: 0
-  mdef: 0
-  mov: 8
   detectionRadius: 5
+  stats:
+    mov: 8
+    str: 1
+    dex: 1
+    mind: 1
+    def: 1
+    mdef: 10
+    vit: 10
+    res: 10
 --- !u!50 &9152649827470385177
 Rigidbody2D:
   serializedVersion: 5

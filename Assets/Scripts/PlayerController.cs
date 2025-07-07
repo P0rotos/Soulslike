@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour, IStats
     [SerializeField] private float rollDuration = 0.3f;
 
     private float speed;
-    private char attackType = (char)0; //0 == strenght meele, 1 == magical distance, 2 ==  dex meele, 3 == dex distance
+    [SerializeField] private char attackType = (char)0; //0 == strenght meele, 3 == magical distance, 1 ==  dex meele, 2 == dex distance
     public float health;
     public Joystick joystick;
     GameObject attack;
@@ -82,20 +82,19 @@ public class PlayerController : MonoBehaviour, IStats
             attackType = (char)((attackType+1)%4);
             if(attackType == (char)0){
                 prefabAttack = Resources.Load<GameObject>("SwordAttack");
-                anim.SetFloat("Type", 0.0f);
             }
             if(attackType == (char)1){
-                prefabAttack = Resources.Load<GameObject>("MagicAttack");
-                anim.SetFloat("Type", 0.0f);
+                prefabAttack = Resources.Load<GameObject>("DaggerAttack");
             }
             if(attackType == (char)2){
-                prefabAttack = Resources.Load<GameObject>("DaggerAttack");
-                anim.SetFloat("Type", 0.0f);
+                prefabAttack = Resources.Load<GameObject>("BowAttack");
             }
             if(attackType == (char)3){
-                prefabAttack = Resources.Load<GameObject>("BowAttack");
-                anim.SetFloat("Type", 0.0f);
+                prefabAttack = Resources.Load<GameObject>("MagicAttack");
             }
+            anim.SetFloat("Type", 0.0f);
+            anim.SetBool("Attack", false);
+            attackFlag = false;
         }
     }
 
@@ -158,45 +157,80 @@ public class PlayerController : MonoBehaviour, IStats
     }
 
     public void Attack(){
-        if(!attackFlag){
-            anim.SetInteger("AttackBT", 1);
-            attackFlag=true;
-            Debug.Log("PlayerController: Attack");
-            // Snap lastMoveDirection to the nearest cardinal direction
-            Vector2 dir = lastMoveDirection;
-            if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y)) {
-                dir = new Vector2(Mathf.Sign(dir.x), 0); // Left or Right
-            } else {
-                dir = new Vector2(0, Mathf.Sign(dir.y)); // Up or Down
+        if (attackFlag || attack != null) return;
+        anim.SetBool("Attack", true);
+        anim.SetFloat("Type", (float)attackType);
+        attackFlag=true;
+        Debug.Log("PlayerController: Attack");
+        // Snap lastMoveDirection to the nearest cardinal direction
+        Vector2 dir = lastMoveDirection;
+        if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y)) {
+            dir = new Vector2(Mathf.Sign(dir.x), 0); // Left or Right
+        } else {
+            dir = new Vector2(0, Mathf.Sign(dir.y)); // Up or Down
+        }
+            
+        Vector3 offset = (Vector3)dir * attackOffset;
+        Vector3 spawnPosition = transform.position + offset;
+
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.Euler(0, 0, angle);
+
+        attack = Instantiate<GameObject>(prefabAttack, spawnPosition, rotation);
+
+        if (dir.y != 0 || dir.x < 0) {
+            Vector3 scale = attack.transform.localScale;
+            attack.transform.localScale = new Vector3(scale.x, -Mathf.Abs(scale.y), scale.z);
+        }
+
+        var follow = attack.GetComponent<IDamage>();
+        if (follow != null){
+            //switchcase de ataques y cambiar stats de player acorde al ataque (quizas cambiar stats arriba en el ctrlizquierdo)
+            follow.player = this;
+            follow.offset = offset;
+            if(attackType == (char)0){
+                follow.dmg = stats.str * 2.0f; // Strength melee attack
             }
-                
-            Vector3 offset = (Vector3)dir * attackOffset;
-            Vector3 spawnPosition = transform.position + offset;
-
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.Euler(0, 0, angle);
-
-            attack = Instantiate<GameObject>(prefabAttack, spawnPosition, rotation);
-
-            if (dir.y != 0 || dir.x < 0) {
-                Vector3 scale = attack.transform.localScale;
-                attack.transform.localScale = new Vector3(scale.x, -Mathf.Abs(scale.y), scale.z);
+            if(attackType == (char)1){
+                follow.dmg = stats.dex * 1.5f; // Dexterity melee attack
             }
-
-            var follow = attack.GetComponent<IDamage>();
-            if (follow != null){
-                //switchcase de ataques y cambiar stats de player acorde al ataque (quizas cambiar stats arriba en el ctrlizquierdo)
-                follow.player = this;
-                follow.offset = offset;
-                follow.dmg = stats.str;
+            if(attackType == (char)2){
+                follow.dmg = stats.dex * 1.5f; // Dexterity ranged attack
+            }
+            if(attackType == (char)3){
+                follow.dmg = stats.mind * 2.0f; // Magic ranged attack
             }
         }
+    }
+    public void TypeChange(){   
+        if (attackFlag) return; // Prevent changing type while attacking
+        attackType = (char)((attackType + 1) % 4);
+        if (attackType == (char)0){
+            prefabAttack = Resources.Load<GameObject>("SwordAttack");
+        }
+        if (attackType == (char)1){
+            prefabAttack = Resources.Load<GameObject>("DaggerAttack");
+        }
+        if (attackType == (char)2){
+            prefabAttack = Resources.Load<GameObject>("BowAttack");
+        }
+        if (attackType == (char)3){
+            prefabAttack = Resources.Load<GameObject>("MagicAttack");
+        }
+        anim.SetFloat("Type", 0.0f);
+        anim.SetBool("Attack", false);
+        attackFlag = false;
     }
 
     public void endAttack(){
         anim.SetBool("Attack", false);
         attackFlag = false;
         Destroy(attack);
+    }
+    public void endAttackDistance()
+    {
+        anim.SetBool("Attack", false);
+        attackFlag = false;
     }
 
     IEnumerator DashCoroutine(){    
